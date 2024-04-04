@@ -1,46 +1,35 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Na atualidade, em meio à incessante busca por otimização do tempo e economia, a população global dedica esforços significativos para aprimorar a gestão do tempo visando conquistar economias substanciais. Ao examinarmos a administração atual de um restaurante, deparamo-nos com uma série de variáveis, todas elas focalizadas nas pessoas e nos produtos. A qualidade desses elementos exerce uma influência direta não apenas na visão do negócio, mas também na experiência do cliente. 
+
+A solução reside em aprimorar a experiência oferecida e o impacto visual do produto. Seja durante a espera pelo atendimento ou no momento do pagamento, esses processos frequentemente comprometem a conexão entre o cliente e o estabelecimento, impactando a experiência proporcionada e o conforto esperado. 
+
+A solução para esse desafio está na aprimoração da gestão do atendimento, tornando o contato e o acesso do cliente aos produtos mais fluidos, tanto em termos de visualização quanto de autonomia durante o consumo. Esses elementos desempenham um papel crucial na experiência do cliente e na atratividade geral do estabelecimento comercial. 
+
+Nesse contexto, destaca-se uma abordagem altamente eficaz para otimizar o uso de tempo e recursos: a adoção de um sistema de controle e gestão no comércio. Essa iniciativa não apenas simplifica o processo de compra, mas também proporciona um controle mais robusto sobre as vendas, garantindo que o cliente desfrute completamente de cada etapa da transação.
+
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Demora no processo de produção, desde a realização do pedido até a finalização e pagamento. 
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo é desenvolver um sistema que permita agilizar o processo de produção no ramo alimentício de uma forma mais específica podemos citar:
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+* Gestão de Pedidos Inteligente: Melhorar a eficiência da logística de pedido, permitindo um controle mais inteligente desde o início;
+* Organização por classificação: Estruturação focalizada e diversificada pelos filtros de classificação, como movimento, valor e consumo;
+* Otimização do Tempo: Ao otimizar o processo, a aplicação libera tempo para outras atividades, promovendo uma experiência de compras mais eficaz e controlada.
+
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A ausência de uma solução que otimize o processo de solicitação e execução de pedidos é uma realidade frequente em muitos restaurantes de pequeno e médio porte. Atualmente, o ritmo desse processo é predominantemente ditado pelo garçom, cujas habilidades são inquestionáveis, porém sua capacidade de atender simultaneamente um número limitado de mesas e o tempo necessário para transmitir os pedidos à cozinha representam desafios inegáveis. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Essa lacuna pode ser facilmente preenchida com a integração da tecnologia em conjunto com a gestão do estabelecimento. A implementação de soluções tecnológicas pode não só agilizar o processo de solicitação de pedidos, mas também melhorar a eficiência geral do restaurante. Segundo dados da Fispal Food Digital, em parceria com a EJFGV, 65% dos operadores de food service utilizam tecnologia em seus estabelecimentos, sendo os principais objetivos do uso para maior gestão e controle (26%) e otimização das operações (22%). A aquisição de recursos tecnológicos traz benefícios aos estabelecimentos de 53% e um diferencial entre concorrentes de 5% (FOOD CONNECTION, 2022). Portanto, a implementação de um projeto que otimize o sistema e auxilie na organização e comunicação entre os funcionários revela-se altamente vantajosa. 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Nosso público-alvo são os empresários independentes, donos de restaurantes de pequeno e médio porte. Compreendemos as demandas únicas desse segmento, onde cada detalhe importa. Entendemos suas necessidades de ter uma gestão eficiente de pedidos e crescimento sustentável, e estamos comprometidos em ser parceiros estratégicos para evolução da empresa.
