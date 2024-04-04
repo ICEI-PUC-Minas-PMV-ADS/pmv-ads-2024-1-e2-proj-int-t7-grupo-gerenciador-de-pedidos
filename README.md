@@ -1,33 +1,30 @@
-# TÍTULO DO PROJETO
+# Gerenciador de Pedidos
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Desenvolvimento Aplicação Web-Backend`
 
-`SEMESTRE`
+`Eixo 2 - 01/2024`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo geral deste projeto é desenvolver uma aplicação para gerenciar pedidos de uma lanchonete, restaurante ou similares.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Alvaro Henrique Orfus Tavares
+* Amaury Vinícius Costa Magno
+* Gustavo Felix Braga
+* Pedro Flávio Ferreira Nogueira
+* Samuel Filipe Nogueira dos Santos
+* Siderley Tadeu Rosa de Oliveira Luciano
+* Vitor Abi-Acl Simões Galinari
 
 ## Orientador
 
-* Nome completo do professor 1
+* Bernardo Jeunon de Alencar
 
 ## Instruções de utilização
 
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
-
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
-
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
-
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
 
 # Documentação
 
