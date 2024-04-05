@@ -225,5 +225,5 @@
 
 
 <figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\docs\img\DiagramaCasoUso.png"/>
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/DiagramaCasoUso.png" alt"Diagrama Caso de Uso">
 </figure>
