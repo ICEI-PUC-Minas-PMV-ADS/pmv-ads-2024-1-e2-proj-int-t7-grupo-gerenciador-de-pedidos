@@ -36,7 +36,11 @@ etiquetas:
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+No quadro abaixo é possível visualizar o andamento do processo de desenvolvimento do projeto,onde são designadas as tarefas a serem realizadas de cada sprint.
+
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/quadro.png" alt"Quadro de Sprints">
+</figure>
  
 
 ### Ferramentas
