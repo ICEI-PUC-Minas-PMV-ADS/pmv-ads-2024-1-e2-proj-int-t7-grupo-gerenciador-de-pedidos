@@ -22,7 +22,19 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Para ter acesso as interações do Wireframing abaixo acesse o Link do projeto figma a seguir : [Gerenciador de Pedidos-Figma](https://www.figma.com/file/eZeXOqLDGp7EZh2EkY13L5/Projeto-Eixo-2?type=design&node-id=0-1&mode=design&t=vZ6s9vumPMasTvxB-0)
+
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Cliente.png" alt"Wireframing do lado do Cliente">
+</figure>
+
+Nessa primeira imagem do wireframing é possivél ver todo o sistema do lado do cliente,suas funcionalidades,interfaces e interações do cliente para alcançar seu objetivo.
+
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Gerente.png" alt"Wireframing do lado do Gerente">
+</figure>
+
+Já nessa segunda imagem é possivél ver o sistema do lado do gerente,onde pela inteface mostrada será possivel gerenciar toda parte de pedidos do sistema.
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
