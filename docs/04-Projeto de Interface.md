@@ -21,7 +21,7 @@ Na primeira imagem é possivel visualizar o fluxo do usuário administrador do s
 Nessa segunda imagem já é possivel visualizar o fluxo do usuário cliente do sistema,no caso o consumidor do estabelecimento.
 
 <figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/ladoCLienteFLuxo.jpeg" alt"Fluxo do Usuário Cliente">
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/ladoClienteFluxo.jpeg" alt"Fluxo do Usuário Cliente">
 </figure>
 
 ![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
