@@ -26,9 +26,11 @@ A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
 
 ## Projeto da Base de Dados
 
-O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
+O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade,na imagem a seguir é possível visualizar o projeto da base de dados do sistema a ser desenvolvido.
  
-Para mais informações, consulte o microfundamento "Modelagem de Dados".
+
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/projetoBase.jpeg" alt"Projeto da base de dados">
 
 ## Tecnologias Utilizadas
 
