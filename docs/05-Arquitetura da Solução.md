@@ -30,7 +30,7 @@ O projeto da base de dados corresponde à representação das entidades e relaci
  
 
 <figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/projetoBase.jpeg" alt"Projeto da base de dados">
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/projetoBD.png" alt"Projeto da base de dados">
 
 ## Tecnologias Utilizadas
 
