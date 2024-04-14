@@ -8,18 +8,66 @@ Não deixe de enumerar os casos de teste de forma sequencial e de garantir que o
 
 Por exemplo:
  
-| **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
+| **Caso de Teste** 	| **CT-01 – Fazer login com o gerente** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-00X - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
-| Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
-|Critério de Êxito | - O cadastro foi realizado com sucesso. |
+|	Requisito Associado 	| RF-001 - Deve permitir o gerente fazer login |
+| Objetivo do Teste 	| Verificar se o gerente consegue fazer login na aplicação |
+| Passos 	| - Abrir o aplicativo - Preencher os campos obrigatórios válidos com os dados de um perfil gerente (e-mail, senha) <br> - Clicar em "Login" |
+|Critério de Êxito | - O gerente faz login com sucesso. |
 |  	|  	|
-| Caso de Teste 	| CT-02 – Efetuar login	|
-|Requisito Associado | RF-00Y	- A aplicação deve possuir opção de fazer login, sendo o login o endereço de e-mail. |
-| Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" |
-|Critério de Êxito | - O login foi realizado com sucesso. |
+| Caso de Teste 	| CT-02 – Adicionar produtos com gerente	|
+|Requisito Associado | RF-002	- Deve permitir ao gerente adicionar produtos. |
+| Objetivo do Teste 	| Verificar se o gerente consegue adicionar produtos. |
+| Passos 	| - Abrir o aplicativo - Preencher os campos obrigatórios válidos com os dados de um perfil gerente (e-mail, senha) <br> - Clicar em "Fazer Login" - Clicar em "Adicionar produtos" - Preencher os campos "Nome", "Descrição" e "Preço" - Adicionar uma imagem para o produto - Clicar em "Adicionar Produto" |
+|Critério de Êxito | - O produto é adicionado com sucesso no sistema. |
+|  	|  	|
+| Caso de Teste 	| CT-03 – Visualizar pedidos realizados	|
+|Requisito Associado | RF-003	- Deve permitir o gerente visualizar todos os pedidos realizados. |
+| Objetivo do Teste 	| Verificar se o gerente consegue visualizar todos os pedidos. |
+| Passos 	| - Abrir o aplicativo - Preencher os campos obrigatórios válidos com os dados de um perfil gerente (e-mail, senha) <br> - Clicar em "Fazer Login" - Conferir se estamos na tela de Pedidos com a aba Pedidos realizados selecionado |
+|Critério de Êxito | - Visualizar todos os pedidos realizados e seus detalhes (ID Mesa, Produto, Data/hora, status do pedido). |
+|  	|  	|
+| Caso de Teste 	| CT-04 – Adicionar produtos a comanda com cliente	|
+|Requisito Associado | RF-004	- Deve permitir ao cliente adicionar produtos a sua comanda. |
+| Objetivo do Teste 	| Verificar se o cliente consegue adicionar produtos a sua comanda. |
+| Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Escolher um produto - Escolher quantidade - Clicar em "Enviar para preparo" - Confirmar a escolha |
+|Critério de Êxito | - Adiciona todos os produtos e quantidades escolhidos na comanda. |
+|  	|  	|
+| Caso de Teste 	| CT-05 – 	|
+|Requisito Associado | RF-005	- Deve permitir ao cliente visualizar todos os pedidos realizados da comanda. |
+| Objetivo do Teste 	| Verificar se o cliente consegue visualizar produtos a sua comanda. |
+| Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Escolher um produto - Escolher quantidade - Clicar em "Enviar para preparo" - Confirmar a escolha - Clicar em "Pedidos" |
+|Critério de Êxito | - Visualizar todos os produtos e quantidades escolhidos na comanda. |
+|  	|  	|
+| Caso de Teste 	| CT-06 – 	|
+|Requisito Associado | RF-006	- Deve permitir ao cliente fechar o pedido para pagamento. |
+| Objetivo do Teste 	| Verificar se o cliente consegue finalizar a sua comanda. |
+| Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Escolher um produto - Escolher quantidade - Clicar em "Enviar para preparo" - Confirmar a escolha - Clicar em "Pedidos" - Clcar em "Finalizar Comanda" |
+|Critério de Êxito | - Comanda é finalizada com sucesso. |
+|  	|  	|
+| Caso de Teste 	| CT-07 – 	|
+|Requisito Associado | RF-007	- Deve permitir o cliente visualizar os produtos pela sua categoria. |
+| Objetivo do Teste 	| Verificar se o cliente consegue visualizar os produtos pela sua categoria. |
+| Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Navegar pelas categorias (Lanches, Bebidas, Sobremesas e Outros) |
+|Critério de Êxito | - Visualizar os produtos de acordo com a categoria selecionada. |
+|  	|  	|
+| Caso de Teste 	| CT-08 – 	|
+|Requisito Associado | RF-008	- Deve permitir ao gerente dar baixa aos pedidos já pagos. |
+| Objetivo do Teste 	| Verificar se o gerente consegue dar baixa aos pedidos já pagos. |
+| Passos 	| - Abrir o aplicativo - Preencher os campos obrigatórios válidos com os dados de um perfil gerente (e-mail, senha) <br> - Clicar em "Fazer Login" - Conferir se estamos na tela de Pedidos com a aba Pedidos realizados selecionado - Mudar status do pedido para "Pago"  |
+|Critério de Êxito | - Visualizar se o status foi alterado com sucesso. |
+|  	|  	|
+| Caso de Teste 	| CT-09 – 	|
+|Requisito Associado | RF-009	- Deve permitir o cliente navegar entre as páginas da aplicação. |
+| Objetivo do Teste 	| Verificar se o cliente consegue navegar entre as páginas da aplicação. |
+| Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Navegar pelas páginas (Início, Cardápio, Pedidos)  |
+|Critério de Êxito | - Visualizar as páginas de acordo com a aba selecionada. |
+|  	|  	|
+| Caso de Teste 	| CT-10 – 	|
+|Requisito Associado | RF-010	- Deve permitir a escolha de quantidade do produto que vai ser adicionado ao pedido. |
+| Objetivo do Teste 	| Verificar se o cliente consegue escolher a quantidade do produto que vai ser adicionado ao pedido. |
+| Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Escolher um produto - Escolher quantidade  |
+|Critério de Êxito | - Mudar a quantidade e ao realizar o pedido apresentar a quantidade escolhida corretamente. |
 
  
 > **Links Úteis**:
