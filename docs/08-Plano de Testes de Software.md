@@ -31,37 +31,37 @@ Os casos de teste foram enumerados de forma sequencial e garantem que os requisi
 | Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Escolher um produto - Escolher quantidade - Clicar em "Enviar para preparo" - Confirmar a escolha |
 |Critério de Êxito | - Adiciona todos os produtos e quantidades escolhidos na comanda. |
 |  	|  	|
-| Caso de Teste 	| CT-05 – 	|
+| Caso de Teste 	| CT-05 – Visualizar produtos na comanda	|
 |Requisito Associado | RF-005	- Deve permitir ao cliente visualizar todos os pedidos realizados da comanda. |
 | Objetivo do Teste 	| Verificar se o cliente consegue visualizar produtos a sua comanda. |
 | Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Escolher um produto - Escolher quantidade - Clicar em "Enviar para preparo" - Confirmar a escolha - Clicar em "Pedidos" |
 |Critério de Êxito | - Visualizar todos os produtos e quantidades escolhidos na comanda. |
 |  	|  	|
-| Caso de Teste 	| CT-06 – 	|
+| Caso de Teste 	| CT-06 – Finalizar a comanda	|
 |Requisito Associado | RF-006	- Deve permitir ao cliente fechar o pedido para pagamento. |
 | Objetivo do Teste 	| Verificar se o cliente consegue finalizar a sua comanda. |
 | Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Escolher um produto - Escolher quantidade - Clicar em "Enviar para preparo" - Confirmar a escolha - Clicar em "Pedidos" - Clcar em "Finalizar Comanda" |
 |Critério de Êxito | - Comanda é finalizada com sucesso. |
 |  	|  	|
-| Caso de Teste 	| CT-07 – 	|
+| Caso de Teste 	| CT-07 – Visualizar produtos filtrados por categoria	|
 |Requisito Associado | RF-007	- Deve permitir o cliente visualizar os produtos pela sua categoria. |
 | Objetivo do Teste 	| Verificar se o cliente consegue visualizar os produtos pela sua categoria. |
 | Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Navegar pelas categorias (Lanches, Bebidas, Sobremesas e Outros) |
 |Critério de Êxito | - Visualizar os produtos de acordo com a categoria selecionada. |
 |  	|  	|
-| Caso de Teste 	| CT-08 – 	|
+| Caso de Teste 	| CT-08 – Visualizar status dos pedidos	|
 |Requisito Associado | RF-008	- Deve permitir ao gerente dar baixa aos pedidos já pagos. |
 | Objetivo do Teste 	| Verificar se o gerente consegue dar baixa aos pedidos já pagos. |
 | Passos 	| - Abrir o aplicativo - Preencher os campos obrigatórios válidos com os dados de um perfil gerente (e-mail, senha) <br> - Clicar em "Fazer Login" - Conferir se estamos na tela de Pedidos com a aba Pedidos realizados selecionado - Mudar status do pedido para "Pago"  |
 |Critério de Êxito | - Visualizar se o status foi alterado com sucesso. |
 |  	|  	|
-| Caso de Teste 	| CT-09 – 	|
+| Caso de Teste 	| CT-09 – Navegar entre as páginas do cardápio	|
 |Requisito Associado | RF-009	- Deve permitir o cliente navegar entre as páginas da aplicação. |
 | Objetivo do Teste 	| Verificar se o cliente consegue navegar entre as páginas da aplicação. |
 | Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Navegar pelas páginas (Início, Cardápio, Pedidos)  |
 |Critério de Êxito | - Visualizar as páginas de acordo com a aba selecionada. |
 |  	|  	|
-| Caso de Teste 	| CT-10 – 	|
+| Caso de Teste 	| CT-10 – Mudar a quantidade dos produtos	|
 |Requisito Associado | RF-010	- Deve permitir a escolha de quantidade do produto que vai ser adicionado ao pedido. |
 | Objetivo do Teste 	| Verificar se o cliente consegue escolher a quantidade do produto que vai ser adicionado ao pedido. |
 | Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Escolher um produto - Escolher quantidade  |
