@@ -11,7 +11,7 @@ using backend.Models;
 namespace backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240423141509_AddTableProdutos")]
+    [Migration("20240424131749_AddTableProdutos")]
     partial class AddTableProdutos
     {
         /// <inheritdoc />
@@ -40,12 +40,13 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<byte[]>("imagem")
+                        .IsRequired()
+                        .HasColumnType("bytea");
+
                     b.Property<string>("nome")
                         .IsRequired()
                         .HasColumnType("text");
-
-                    b.Property<int>("quantidade")
-                        .HasColumnType("integer");
 
                     b.Property<double>("valor")
                         .HasColumnType("double precision");

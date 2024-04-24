@@ -37,12 +37,13 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<byte[]>("imagem")
+                        .IsRequired()
+                        .HasColumnType("bytea");
+
                     b.Property<string>("nome")
                         .IsRequired()
                         .HasColumnType("text");
-
-                    b.Property<int>("quantidade")
-                        .HasColumnType("integer");
 
                     b.Property<double>("valor")
                         .HasColumnType("double precision");

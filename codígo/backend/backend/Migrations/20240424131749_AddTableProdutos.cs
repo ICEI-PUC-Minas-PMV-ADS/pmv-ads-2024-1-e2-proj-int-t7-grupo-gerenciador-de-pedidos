@@ -20,8 +20,8 @@ namespace backend.Migrations
                     nome = table.Column<string>(type: "text", nullable: false),
                     descricao = table.Column<string>(type: "text", nullable: false),
                     valor = table.Column<double>(type: "double precision", nullable: false),
-                    quantidade = table.Column<int>(type: "integer", nullable: false),
-                    categoria = table.Column<string>(type: "text", nullable: false)
+                    categoria = table.Column<string>(type: "text", nullable: false),
+                    imagem = table.Column<byte[]>(type: "bytea", nullable: false)
                 },
                 constraints: table =>
                 {

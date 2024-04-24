@@ -1,12 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace backend.Models
 {
-    [Table("Produtos")]
-    public class Produto
+    public class ProdutoViewModel
     {
-        [Key]
         public int id { get; set; }
 
         [Required(ErrorMessage = "É obrigatório adicionar um nome!")]
@@ -27,7 +24,8 @@ namespace backend.Models
 
         [Required(ErrorMessage = "É obrigatório adicionar uma imagem!")]
         [Display(Name = "Imagem")]
-        public  byte[] imagem { get; set; }
+        [DataType(DataType.Upload)]
+        public IFormFile ImageUpload { get; set; }
 
     }
 }
