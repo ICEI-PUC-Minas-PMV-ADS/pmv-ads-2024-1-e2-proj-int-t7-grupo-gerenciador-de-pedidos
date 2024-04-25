@@ -7,22 +7,22 @@
 <h1>Produtos</h1>
 
 <p>
-    <a asp-action="Create">Cadastrar Novo</a>
+    <a asp-action="Create" class="btn btn-primary">Cadastrar novo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.nome)
+                @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.valor)
+                @Html.DisplayNameFor(model => model.Valor)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.categoria)
+                @Html.DisplayNameFor(model => model.Categoria)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.imagem)
+                @Html.DisplayNameFor(model => model.Imagem)
             </th>
             <th></th>
         </tr>
@@ -31,28 +31,21 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.nome)
+                @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.valor)
+                R$@Html.DisplayFor(modelItem => item.Valor)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.categoria)
+                @Html.DisplayFor(modelItem => item.Categoria)
             </td>
-                @if (item.imagem != null)
-                {
-                    <td>
-                        @{
-                            var base64 = Convert.ToBase64String(item.imagem);
-                            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-                        }
-                        <img src='@imgSrc' style="max-width:110px; max-height:80px;" />
-                    </td>
-                }
             <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                <img src=".\assets\@{ @item.Imagem }" width="70"/>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

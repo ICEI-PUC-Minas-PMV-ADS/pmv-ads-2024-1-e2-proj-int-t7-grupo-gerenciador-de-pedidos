@@ -7,27 +7,27 @@ namespace backend.Models
     public class Produto
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "É obrigatório adicionar um nome!")]
         [Display(Name = "Nome")]
-        public string nome { get; set; }
+        public string Nome { get; set; }
 
         [Required(ErrorMessage = "É obrigatório adicionar uma descrição!")]
         [Display(Name = "Descrição")]
-        public string descricao { get; set; }
+        public string Descricao { get; set; }
 
         [Required(ErrorMessage = "É obrigatório adicionar um valor!")]
         [Display(Name = "Preço")]
-        public double valor { get; set; }
+        public double Valor { get; set; }
 
         [Required(ErrorMessage = "É obrigatório adicionar uma categoria!")]
         [Display(Name = "Categoria")]
-        public string categoria { get; set; }
+        public string Categoria { get; set; }
 
-        [Required(ErrorMessage = "É obrigatório adicionar uma imagem!")]
+        
         [Display(Name = "Imagem")]
-        public  byte[] imagem { get; set; }
+        public  string Imagem { get; set; }
 
     }
 }

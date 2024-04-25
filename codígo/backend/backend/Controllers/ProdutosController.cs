@@ -2,16 +2,18 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace backend.Controllers
 {
     public class ProdutosController : Controller
     {
         private readonly AppDbContext _context;
-        public ProdutosController(AppDbContext context)
+        private string _filePath;
+
+        public ProdutosController(AppDbContext context, IWebHostEnvironment env)
         {
             _context = context;
+            _filePath = env.WebRootPath;
         }
 
         //GET
@@ -24,37 +26,62 @@ namespace backend.Controllers
 
         public IActionResult Create()
         {
-            return View(new ProdutoViewModel());
+            return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(ProdutoViewModel model)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Produto produto,IFormFile anexo)
         {
-
             if (ModelState.IsValid)
             {
-                var produto = new Produto();
-                produto.nome = model.nome;
-                produto.valor = model.valor;
-                produto.categoria = model.categoria;
-                produto.descricao = model.descricao;
+                if (!ImageIsValid(anexo))
+                    return View(produto);
 
-                if (model.ImageUpload != null && model.ImageUpload.Length > 0)
-                {
-                    using (var memoryStream = new MemoryStream())
-                    {
-                        await model.ImageUpload.CopyToAsync(memoryStream);
-                        produto.imagem = memoryStream.ToArray();
-                    }
 
-                    _context.Produtos.Add(produto);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction("Index");
+            var nome = SaveFile(anexo);
+            produto.Imagem = nome;
 
-                }
-                
+
+            
+                _context.Produtos.Add(produto);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
             }
-            return View(model);
+            return View(produto);
+
+        }
+        public string SaveFile(IFormFile anexo)
+        {
+            var nome = Guid.NewGuid().ToString() + anexo.FileName;
+
+            var filePath = _filePath + "//assets";
+            if (!Directory.Exists(filePath))
+            {
+                Directory.CreateDirectory(filePath);
+            }
+
+            using (var stream = System.IO.File.Create(filePath + "\\" + nome))
+            {
+                anexo.CopyToAsync(stream);
+            }
+
+            return nome;
+        }
+
+        public bool ImageIsValid(IFormFile anexo)
+        {
+            switch (anexo.ContentType)
+            {
+                case "image/jpeg":
+                    return true;
+                case "image/jpg":
+                    return true;
+                case "image/png":
+                    return true;
+                default:
+                    return false;
+            }
         }
     }
 }
