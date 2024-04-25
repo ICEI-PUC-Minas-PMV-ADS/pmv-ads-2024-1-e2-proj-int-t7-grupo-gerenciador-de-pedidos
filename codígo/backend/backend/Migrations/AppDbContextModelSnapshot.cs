@@ -23,32 +23,32 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.Produto", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("categoria")
+                    b.Property<string>("Categoria")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("descricao")
+                    b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<byte[]>("imagem")
-                        .IsRequired()
-                        .HasColumnType("bytea");
-
-                    b.Property<string>("nome")
+                    b.Property<string>("Imagem")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<double>("valor")
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<double>("Valor")
                         .HasColumnType("double precision");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Produtos");
                 });
