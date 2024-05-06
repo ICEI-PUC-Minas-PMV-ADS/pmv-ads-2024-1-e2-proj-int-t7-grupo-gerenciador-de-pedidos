@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
@@ -11,9 +12,11 @@ using backend.Models;
 namespace backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240506015308_AddTableMesas")]
+    partial class AddTableMesas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,40 +24,6 @@ namespace backend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("backend.Models.ItemPedido", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Data")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("MesaId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProdutoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StatusId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MesaId");
-
-                    b.HasIndex("ProdutoId");
-
-                    b.HasIndex("StatusId");
-
-                    b.ToTable("ItemPedidos");
-                });
 
             modelBuilder.Entity("backend.Models.Mesa", b =>
                 {
@@ -79,6 +48,10 @@ namespace backend.Migrations
 
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("ListaPedidos")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MesaId")
                         .HasColumnType("int");
@@ -148,33 +121,6 @@ namespace backend.Migrations
                     b.ToTable("StatusPedidos");
                 });
 
-            modelBuilder.Entity("backend.Models.ItemPedido", b =>
-                {
-                    b.HasOne("backend.Models.Mesa", "Mesa")
-                        .WithMany()
-                        .HasForeignKey("MesaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("backend.Models.Produto", "Produto")
-                        .WithMany("ItemPedidos")
-                        .HasForeignKey("ProdutoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("backend.Models.StatusPedido", "Status")
-                        .WithMany()
-                        .HasForeignKey("StatusId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Mesa");
-
-                    b.Navigation("Produto");
-
-                    b.Navigation("Status");
-                });
-
             modelBuilder.Entity("backend.Models.Pedido", b =>
                 {
                     b.HasOne("backend.Models.Mesa", "Mesa")
@@ -204,11 +150,6 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.Mesa", b =>
                 {
                     b.Navigation("Pedidos");
-                });
-
-            modelBuilder.Entity("backend.Models.Produto", b =>
-                {
-                    b.Navigation("ItemPedidos");
                 });
 
             modelBuilder.Entity("backend.Models.StatusPedido", b =>
