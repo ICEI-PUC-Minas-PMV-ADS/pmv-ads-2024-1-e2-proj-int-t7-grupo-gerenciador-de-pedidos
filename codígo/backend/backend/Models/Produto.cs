@@ -29,5 +29,6 @@ namespace backend.Models
         [Display(Name = "Imagem")]
         public  string Imagem { get; set; }
 
+        public ICollection<ItemPedido> ItemPedidos { get; set; }
     }
 }

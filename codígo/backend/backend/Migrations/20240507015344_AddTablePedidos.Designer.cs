@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
@@ -11,9 +12,11 @@ using backend.Models;
 namespace backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240507015344_AddTablePedidos")]
+    partial class AddTablePedidos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,32 +24,6 @@ namespace backend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("backend.Models.ItemPedido", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("PedidoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProdutoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PedidoId");
-
-                    b.HasIndex("ProdutoId");
-
-                    b.ToTable("ItemPedido");
-                });
 
             modelBuilder.Entity("backend.Models.Mesa", b =>
                 {
@@ -135,35 +112,16 @@ namespace backend.Migrations
                     b.ToTable("StatusPedidos");
                 });
 
-            modelBuilder.Entity("backend.Models.ItemPedido", b =>
-                {
-                    b.HasOne("backend.Models.Pedido", "Pedido")
-                        .WithMany("ItemPedidos")
-                        .HasForeignKey("PedidoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("backend.Models.Produto", "Produto")
-                        .WithMany("ItemPedidos")
-                        .HasForeignKey("ProdutoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Pedido");
-
-                    b.Navigation("Produto");
-                });
-
             modelBuilder.Entity("backend.Models.Pedido", b =>
                 {
                     b.HasOne("backend.Models.Mesa", "Mesa")
-                        .WithMany("Pedidos")
+                        .WithMany()
                         .HasForeignKey("MesaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("backend.Models.StatusPedido", "Status")
-                        .WithMany("Pedidos")
+                        .WithMany()
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -171,26 +129,6 @@ namespace backend.Migrations
                     b.Navigation("Mesa");
 
                     b.Navigation("Status");
-                });
-
-            modelBuilder.Entity("backend.Models.Mesa", b =>
-                {
-                    b.Navigation("Pedidos");
-                });
-
-            modelBuilder.Entity("backend.Models.Pedido", b =>
-                {
-                    b.Navigation("ItemPedidos");
-                });
-
-            modelBuilder.Entity("backend.Models.Produto", b =>
-                {
-                    b.Navigation("ItemPedidos");
-                });
-
-            modelBuilder.Entity("backend.Models.StatusPedido", b =>
-                {
-                    b.Navigation("Pedidos");
                 });
 #pragma warning restore 612, 618
         }
