@@ -11,5 +11,6 @@ namespace backend.Models
         public DbSet<StatusPedido> StatusPedidos { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<ItemPedido> ItemPedidos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

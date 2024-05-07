@@ -34,6 +34,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuários</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        @if(User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <h5>Bem vindo, @User.Identity.Name  </h5>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Login" ></a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
