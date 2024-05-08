@@ -10,9 +10,11 @@ using BCrypt.Net;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.AspNetCore.Authorization;
 
 namespace backend.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class UsuariosController : Controller
     {
         private readonly AppDbContext _context;
@@ -28,26 +30,27 @@ namespace backend.Controllers
             return View(await _context.Usuarios.ToListAsync());
         }
 
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(Usuario usuario)
         {
-            var userOK = await _context.Usuarios.FirstOrDefaultAsync(u => u.Acesso == usuario.Acesso);
-            
-            if(userOK == null)
-            {
-                ViewBag.Message = "USUÁRIO E/OU SENHA INVÁLIDOS";
-                return View();
-            }
-            var dados = userOK;
+            var dados = await _context.Usuarios.FirstOrDefaultAsync(u => (u.Acesso == usuario.Acesso) || (u.Nome == usuario.Acesso));
 
-            if(userOK == null)
+            if (dados == null)
             {
-                ViewBag.Message = "USUÁRIO E/OU SENHA INVÁLIDOS";
+                ViewBag.Message = "Usuário e/ou senha não encontrado";
                 return View();
             }
 
@@ -55,13 +58,14 @@ namespace backend.Controllers
 
             if (senhaOK)
             {
-                var claims = new List<Claim>();
+                var claims = new List<Claim>
                 {
-                    _ = new Claim(ClaimTypes.Name, dados.Nome);
-                    _ = new Claim(ClaimTypes.NameIdentifier, dados.Id.ToString());
-                    _ = new Claim(ClaimTypes.Role, dados.Grupo.ToString());
+                    new Claim(ClaimTypes.Name, dados.Nome),
+                    new Claim(ClaimTypes.NameIdentifier, dados.Id.ToString()),
+                    new Claim(ClaimTypes.Role, dados.Grupo.ToString()),
+                    new Claim("UserId", dados.Id.ToString())
                 };
-
+                
                 var usuarioIdentity = new ClaimsIdentity(claims, "login");
                 ClaimsPrincipal principal = new ClaimsPrincipal(usuarioIdentity);
 
@@ -77,13 +81,14 @@ namespace backend.Controllers
             }
             else
             {
-                ViewBag.Message = "USUÁRIO E/OU SENHA INVÁLIDOS";
+                ViewBag.Message = "Usuário e/ou senha não encontrado";
                 return View();
             }
 
             return View();
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
@@ -133,6 +138,7 @@ namespace backend.Controllers
         }
 
         // GET: Usuarios/Edit/5
+        [AllowAnonymous]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -152,7 +158,9 @@ namespace backend.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Acesso,Senha,Grupo")] Usuario usuario)
         {
             if (id != usuario.Id)

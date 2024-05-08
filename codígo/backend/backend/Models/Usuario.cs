@@ -26,7 +26,7 @@ namespace backend.Models
 
     public enum Perfil
     {
-        Gerente,
+        Administrador,
         Cozinha,
         Garçom,
         User

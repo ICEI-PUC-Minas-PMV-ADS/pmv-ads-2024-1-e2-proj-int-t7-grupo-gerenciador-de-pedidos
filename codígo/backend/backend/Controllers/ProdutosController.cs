@@ -1,10 +1,12 @@
 ﻿using backend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class ProdutosController : Controller
     {
         private readonly AppDbContext _context;
