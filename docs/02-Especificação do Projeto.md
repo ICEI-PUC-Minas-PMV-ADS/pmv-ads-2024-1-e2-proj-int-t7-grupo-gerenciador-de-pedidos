@@ -155,6 +155,12 @@
 <td><b>RF-010</b></td>
 <td>Deve permitir a escolha de quantidade do produto que vai ser adicionado ao pedido</td>
 <td>Alta</td>
+<td><b>RF-011</b></td>
+<td>Deve permitir editar um produto</td>
+<td>Alta</td>
+<td><b>RF-012</b></td>
+<td>Deve permitir deletar um produto</td>
+<td>Alta</td>
 </tr>
 </tbody>
 </table>
