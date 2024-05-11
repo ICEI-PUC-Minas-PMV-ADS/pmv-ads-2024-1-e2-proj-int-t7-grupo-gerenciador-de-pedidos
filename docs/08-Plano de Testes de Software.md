@@ -66,6 +66,19 @@ Os casos de teste foram enumerados de forma sequencial e garantem que os requisi
 | Objetivo do Teste 	| Verificar se o cliente consegue escolher a quantidade do produto que vai ser adicionado ao pedido. |
 | Passos 	| - Ler o QR identificador da mesa - Clicar em "Cardápio" - Escolher um produto - Escolher quantidade  |
 |Critério de Êxito | - Mudar a quantidade e ao realizar o pedido apresentar a quantidade escolhida corretamente. |
+|  	|  	|
+| Caso de Teste 	| CT-11 – Editar produtos com gerente	|
+|Requisito Associado | RF-002	- Deve permitir ao gerente editar produtos. |
+| Objetivo do Teste 	| Verificar se o gerente consegue editar produtos. |
+| Passos 	| - Abrir o aplicativo - Preencher os campos obrigatórios válidos com os dados de um perfil gerente (e-mail, senha) <br> - Clicar em "Fazer Login" - Clicar no botão de editar produtos" - Preencher os campos que deseja editar "Nome", "Descrição", "Preço", "Imagem" - Clicar em "Editar Produto" |
+|Critério de Êxito | - O produto é editado com sucesso no sistema. |
+|  	|  	|
+| Caso de Teste 	| CT-12 – Deletar produtos com gerente	|
+|Requisito Associado | RF-002	- Deve permitir ao gerente deletar produtos. |
+| Objetivo do Teste 	| Verificar se o gerente consegue deletar produtos. |
+| Passos 	| - Abrir o aplicativo - Preencher os campos obrigatórios válidos com os dados de um perfil gerente (e-mail, senha) <br> - Clicar em "Fazer Login" - Clicar no botão de deletar produtos" - Verificar os dados do produto que será deletado "Nome", "Descrição", "Preço" - Clicar em "Deletar Produto" |
+|Critério de Êxito | - O produto é deletado com sucesso no sistema. |
+|  	|  	|
 
  
 > **Links Úteis**:
