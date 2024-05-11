@@ -53,6 +53,42 @@ namespace backend.Controllers
             return View(produto);
 
         }
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null) return NotFound();
+
+            var produto = await _context.Produtos.FindAsync(id);
+
+            if (produto == null) return NotFound();
+
+            return View(produto);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, Produto produto, IFormFile anexo)
+        {
+            if (id != produto.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                if (!ImageIsValid(anexo))
+                    return View(produto);
+
+
+                var nome = SaveFile(anexo);
+                produto.Imagem = nome;
+
+                _context.Update(produto);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(produto);
+        }
         public string SaveFile(IFormFile anexo)
         {
             var nome = Guid.NewGuid().ToString() + anexo.FileName;
