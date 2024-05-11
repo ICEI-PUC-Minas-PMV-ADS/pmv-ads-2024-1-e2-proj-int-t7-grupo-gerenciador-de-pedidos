@@ -30,7 +30,9 @@ Visualizar produtos na comanda no sistema de pedidos.\
 Finalizar a comanda no sistema de pedidos.\
 Visualizar produtos filtrados por categoria no sistema de pedidos.\
 Navegar entre as páginas do cardápio no sistema de pedidos.\
-Mudar a quantidade dos produtos no sistema de pedidos.
+Mudar a quantidade dos produtos no sistema de pedidos.\
+Editar produtos no sistema de gestão.\
+Deletar produtos no sistema de gestão.
 
 **6. Dados a serem coletados**\
 Quantidade de cliques para realizar cada tarefa.\
