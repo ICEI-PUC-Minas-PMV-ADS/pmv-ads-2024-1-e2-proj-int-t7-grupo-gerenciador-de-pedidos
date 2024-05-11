@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Produtos\Component.razor" />
+    <Content Remove="wwwroot\assets\afa94c95-11a7-4b54-b3c2-3a9d351ccb6ahamb.jpg" />
+    <Content Remove="wwwroot\assets\e4ca5e62-9303-443a-b06f-64fc70cc851fhamburguer.jpg" />
+    <Content Remove="wwwroot\assets\ed545dfa-62d8-4a28-9c15-e0d6777553e4sucoDeLaranja.jpg" />
+    <Content Remove="wwwroot\assets\fdcfab51-8660-42c4-85d8-fb45519efe6ahamburguer.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.4" />
@@ -17,6 +25,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\" />
   </ItemGroup>
 
 </Project>

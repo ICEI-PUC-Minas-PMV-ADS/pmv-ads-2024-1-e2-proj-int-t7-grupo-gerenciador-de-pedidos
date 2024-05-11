@@ -24,7 +24,6 @@ namespace backend.Models
         [Required(ErrorMessage = "É obrigatório adicionar uma categoria!")]
         [Display(Name = "Categoria")]
         public string Categoria { get; set; }
-
         
         [Display(Name = "Imagem")]
         public  string Imagem { get; set; }

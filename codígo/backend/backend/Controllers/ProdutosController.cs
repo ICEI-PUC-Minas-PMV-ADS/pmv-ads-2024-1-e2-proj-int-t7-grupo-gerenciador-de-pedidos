@@ -89,6 +89,40 @@ namespace backend.Controllers
             }
             return View(produto);
         }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var produto = await _context.Produtos
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (produto == null)
+            {
+                return NotFound();
+            }
+
+            return View(produto);
+        }
+
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var produto = await _context.Produtos.FindAsync(id);
+            if (produto != null)
+            {
+                _context.Produtos.Remove(produto);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+
         public string SaveFile(IFormFile anexo)
         {
             var nome = Guid.NewGuid().ToString() + anexo.FileName;
