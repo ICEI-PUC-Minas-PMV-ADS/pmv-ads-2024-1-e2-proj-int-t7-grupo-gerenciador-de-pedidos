@@ -23,11 +23,20 @@ namespace backend.Models
 
         [Required(ErrorMessage = "É obrigatório adicionar uma categoria!")]
         [Display(Name = "Categoria")]
-        public string Categoria { get; set; }
-        
+        public Categorias Categoria { get; set; }
+
+        [Required(ErrorMessage = "É obrigatório adicionar uma imagem!")]
         [Display(Name = "Imagem")]
         public  string Imagem { get; set; }
 
         public ICollection<ItemPedido> ItemPedidos { get; set; }
+    }
+    public enum Categorias
+    {
+        PratoPrincipal,
+        Entradas,
+        Petiscos,
+        Bebidas,
+        Sobremesa
     }
 }

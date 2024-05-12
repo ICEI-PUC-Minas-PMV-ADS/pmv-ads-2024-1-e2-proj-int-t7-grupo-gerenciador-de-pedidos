@@ -106,11 +106,8 @@ namespace backend.Controllers
 
             var usuario = await _context.Usuarios
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
+            if (usuario == null) return NotFound();
+               
             return View(usuario);
         }
 
