@@ -6,6 +6,7 @@ Layout padrão da aplicação que será utilizado em todas as páginas com a def
 
 
 
+
 Na primeira imagem é possivel visualizar o layout do usuário administrador do sistema,onde ele consegue ter todo gerenciamento do fluxo de pedidos e produtos do estabelecimento.
 Esse layout é utilizado somente no desktop ou notebook.
 
@@ -15,7 +16,7 @@ Esse layout é utilizado somente no desktop ou notebook.
 
 
 
-NEssa imagem é possivel visualizar o layout do usuário cliente do sistema,onde ele consegue visualizar seus pedidos e os produtos do estabelecimento.
+Nessa imagem é possivel visualizar o layout do usuário cliente do sistema,onde ele consegue visualizar seus pedidos e os produtos do estabelecimento.
 Esse layout é utilizado para mobile.
 
 <figure> 
