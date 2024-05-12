@@ -4,7 +4,7 @@ Implementação do sistema descrita por meio dos requisitos funcionais e/ou não
 
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
-|------|-----------------------------------------|----|
+|------|-----------------------------------------|-------------|
 |RF-001| A aplicação deve permitir que o usuário gerente consiga realizar login | UsuariosController.cs / Usuarios.cs / Login.cshtml | AccessDenied.cshtml | Program.cs |
 |RF-002| A aplicação deve permitir adicionar produtos  | ProdutosController.cs / Produto.cs / Create.cshtml | Index.cshtml | assets |
 |RF-011| A aplicação deve permitir editar um produto  | ProdutosController.cs / Produto.cs / Edit.cshtml | Index.cshtml |
