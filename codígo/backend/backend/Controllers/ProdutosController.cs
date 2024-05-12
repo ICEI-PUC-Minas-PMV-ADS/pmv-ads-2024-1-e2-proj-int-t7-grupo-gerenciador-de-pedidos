@@ -31,6 +31,21 @@ namespace backend.Controllers
             return View();
         }
 
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var produto = await _context.Produtos
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (produto == null) return NotFound();
+
+            ViewBag.ImagemProduto = produto.Imagem;
+            return View(produto);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Produto produto,IFormFile anexo)
@@ -41,8 +56,8 @@ namespace backend.Controllers
                     return View(produto);
 
 
-            var nome = SaveFile(anexo);
-            produto.Imagem = nome;
+                var nome = SaveFile(anexo);
+                produto.Imagem = nome;
 
 
             

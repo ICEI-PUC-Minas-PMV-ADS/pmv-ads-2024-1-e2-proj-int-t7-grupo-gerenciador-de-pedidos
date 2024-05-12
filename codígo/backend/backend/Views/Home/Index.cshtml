@@ -5,4 +5,16 @@
 <div class="text-center">
         <h1 class="display-4">Bem vindo a EasyEats</h1>
         <h4>Seu site de controle e gestão empresarial!!</h4>
+        @if (User.Identity.IsAuthenticated)
+        {
+                <h5>
+                    Bem vindo, @User.Identity.Name
+                </h5>
+        }
+        else
+        {
+            <h5>
+                <a class="btn btn-primary" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
+            </h5>
+        }
 </div>

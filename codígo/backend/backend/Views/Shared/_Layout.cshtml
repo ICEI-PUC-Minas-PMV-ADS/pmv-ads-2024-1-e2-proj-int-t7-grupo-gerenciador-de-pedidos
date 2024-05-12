@@ -47,10 +47,11 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <h5>
+                                <h5 style="flex-direction:row" >
                                     Bem vindo, @User.Identity.Name
                                 </h5>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
+                                <a class="nav-link text-black" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
+                                
                             </li>
                         }
                         else
