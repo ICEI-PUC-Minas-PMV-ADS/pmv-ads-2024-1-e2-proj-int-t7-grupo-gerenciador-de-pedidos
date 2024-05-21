@@ -1,0 +1,57 @@
+﻿@model IEnumerable<backend.Models.Produto>
+
+@{
+    ViewData["Title"] = "Cardapio";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+
+
+<head>
+    <title>@ViewData["Title"] - Prato Principal</title>
+    <style>
+        .body:{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            min-width: 230px;
+            max-width: 420px;
+            padding:0;
+            margin:0;
+        }
+
+        .navCardapio{
+            border: 2px solid green;
+            width: 100%;
+            display:flex;
+            align-items:center;
+            margin:0;
+            padding:0;
+        }
+
+        .imagemApresentation{
+            background-size:cover;
+            width:100%;
+            display: block;
+
+        }
+
+        .image-text{
+            align-items:center;
+            justify-content:center;
+            font-size: 5vh;
+            text-align: center;
+            position: absolute;
+        }
+    </style>
+
+</head>
+<body class="body">
+    <nav class="navCardapio">
+        <img class="imagemApresentation" src="~/assets/ToWebdesign/BkgOrange.svg" />
+        <p class="image-text">Cardápio Digital</p>
+    </nav>
+
+    
+</body>

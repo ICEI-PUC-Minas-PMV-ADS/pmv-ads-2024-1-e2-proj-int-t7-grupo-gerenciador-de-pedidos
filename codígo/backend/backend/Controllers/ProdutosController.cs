@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace backend.Controllers
 {
@@ -25,6 +26,10 @@ namespace backend.Controllers
 
             return View(dados);
         }
+        public IActionResult Cliente()
+        {
+            return View();
+        }
 
         public IActionResult Create()
         {
@@ -42,7 +47,6 @@ namespace backend.Controllers
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (produto == null) return NotFound();
 
-            ViewBag.ImagemProduto = produto.Imagem;
             return View(produto);
         }
 
@@ -82,11 +86,15 @@ namespace backend.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, Produto produto, IFormFile anexo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Descricao,Valor,Categoria,Imagem")] Produto produto, IFormFile anexo)
         {
             if (id != produto.Id)
             {
                 return NotFound();
+            }
+            if (anexo == null)
+            {
+                return View(produto);
             }
 
             if (ModelState.IsValid)
@@ -158,6 +166,10 @@ namespace backend.Controllers
 
         public bool ImageIsValid(IFormFile anexo)
         {
+            if (anexo == null)
+            {
+                return false;
+            }
             switch (anexo.ContentType)
             {
                 case "image/jpeg":
