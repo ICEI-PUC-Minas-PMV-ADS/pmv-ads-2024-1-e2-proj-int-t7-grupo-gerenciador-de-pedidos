@@ -8,9 +8,17 @@
 
   <ItemGroup>
     <Content Remove="Views\Produtos\Component.razor" />
+    <Content Remove="wwwroot\assets\277c5d28-d8cc-4cb7-9b7f-f93519fd2305Hamburguer.jpg" />
+    <Content Remove="wwwroot\assets\27d7283b-47e8-418c-b94b-2fbb1fae8003hamburguer2.jpg" />
+    <Content Remove="wwwroot\assets\4aba146e-c988-4def-b0f3-5960b178a369BatataFrita.jpeg" />
+    <Content Remove="wwwroot\assets\6f3de290-d5fa-4ce3-8b95-4a70fced33c6Hamburguer2.jpg" />
+    <Content Remove="wwwroot\assets\798d27d8-c233-45b5-a85d-61479e47bd2aHamburguer.jpg" />
     <Content Remove="wwwroot\assets\afa94c95-11a7-4b54-b3c2-3a9d351ccb6ahamb.jpg" />
+    <Content Remove="wwwroot\assets\b40bbe46-9a58-4847-bc91-04e690c3d6bdHamburguer.jpg" />
+    <Content Remove="wwwroot\assets\e1d65519-c1a5-4322-a737-6fa8c4d1dcf8brigadeiro.jpeg" />
     <Content Remove="wwwroot\assets\e4ca5e62-9303-443a-b06f-64fc70cc851fhamburguer.jpg" />
     <Content Remove="wwwroot\assets\ed545dfa-62d8-4a28-9c15-e0d6777553e4sucoDeLaranja.jpg" />
+    <Content Remove="wwwroot\assets\fd8e81dc-f4e9-4912-b45d-f4f00c2faeafHamburguer.jpg" />
     <Content Remove="wwwroot\assets\fdcfab51-8660-42c4-85d8-fb45519efe6ahamburguer.jpg" />
   </ItemGroup>
 
@@ -25,10 +33,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\assets\" />
   </ItemGroup>
 
 </Project>

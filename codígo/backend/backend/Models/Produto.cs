@@ -25,9 +25,8 @@ namespace backend.Models
         [Display(Name = "Categoria")]
         public Categorias Categoria { get; set; }
 
-        [Required(ErrorMessage = "É obrigatório adicionar uma imagem!")]
         [Display(Name = "Imagem")]
-        public  string Imagem { get; set; }
+        public string Imagem { get; set; }
 
         public ICollection<ItemPedido> ItemPedidos { get; set; }
     }
