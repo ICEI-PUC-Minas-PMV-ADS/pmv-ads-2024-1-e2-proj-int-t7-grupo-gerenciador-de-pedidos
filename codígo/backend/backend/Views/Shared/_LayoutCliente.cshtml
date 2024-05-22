@@ -10,8 +10,8 @@
     <style>
         .options{
             min-height:83.9vh;
-            max-width: 420px;
-            min-width: 230px;
+            max-width: 500px;
+            min-width: 320px;
         }
         .color-wine{
             background: #AF3333;
@@ -30,7 +30,7 @@
             justify-content: center;
             border:2px solid black;
             min-width: 230px;
-            max-width: 420px;
+            max-width: 500px;
         }
         .header{
             width: 100%;
@@ -62,6 +62,12 @@
 
         .footer{
             width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .textFooter{
+            color:white;
         }
         </style>
 </head>
@@ -90,18 +96,7 @@
     </div>
 
     <footer class=" color-wine footer">
-        <nav class="containerNav">
-            <div class="containerDiv">
-                <ul class="containerUl containerUlFooter">
-                    <li class="btn btn-outline-success">
-                        <a>Cardápio</a>
-                    </li>
-                    <li class="btn btn-outline-warning">
-                        <a>Pedido</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <p class="textFooter">©Todos os direitos reservados</p>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
