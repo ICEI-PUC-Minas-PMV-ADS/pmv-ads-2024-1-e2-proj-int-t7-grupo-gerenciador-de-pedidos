@@ -1,20 +1,107 @@
-﻿@{
+﻿@model IEnumerable<backend.Models.Produto>
+@{
     ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
 }
+<head>
+    <style>
+        .body: {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            min-width: 230px;
+            max-width: 500px;
+            padding: 0;
+            margin: 0;
+        }
 
-<div class="text-center">
-        <h1 class="display-4">Bem vindo a EasyEats</h1>
-        <h4>Seu site de controle e gestão empresarial!!</h4>
-        @if (User.Identity.IsAuthenticated)
-        {
-                <h5>
-                    Bem vindo, @User.Identity.Name
-                </h5>
+        .containerImgs {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            margin-bottom: 10px;
+            padding: 0;
         }
-        else
-        {
-            <h5>
-                <a class="btn btn-primary" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
-            </h5>
+
+        .divWelcome{
+            width:58%
         }
-</div>
+
+        .textWelcome {
+            color: #AF3333;
+            margin-left: 20px;
+            margin-bottom: 42px;
+            margin-top: 10px
+        }
+
+        .textEats {
+            color: #F88805
+        }
+
+        .text2 {
+            color: #AF3333;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            margin-top: 10px
+        }
+
+        .textLi {
+            color: #F88805;
+            font-size:18px;
+            margin-bottom: 10px
+         }
+           
+
+        .imagemApresentation {
+            background-size: cover;
+            width: 100%;
+            display: block;
+        }
+
+        .imgsHome{
+            width:24%;
+            height:150px;
+        }
+
+        .image-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-align: center;
+            position: absolute;
+            color: aliceblue;
+            font-weight: 700;
+        }
+
+    </style>
+
+</head>
+<body class="body">
+    <div>
+        <img class="imgsHome" src="~/assets/ToWebdesign/esfirra1.png" />
+        <img class="imgsHome" src="~/assets/ToWebdesign/esfirra2.png" />
+        <img class="imgsHome" src="~/assets/ToWebdesign/hamb1.png" />
+        <img class="imgsHome" src="~/assets/ToWebdesign/hamb2.png" />
+        <div class="divWelcome">  
+            <h1 class="textWelcome">Bem vindo a Easy <span class="textEats">Eats!</span></h1>
+        </div>
+    </div>
+    <nav class="containerImgs">
+        <img class="imagemApresentation" src="~/assets/ToWebdesign/BkgOrangeBlock.svg" />
+        <p class="image-text">Tudo em um só Lugar!</p>
+    </nav>
+    <div>
+        <h1 class="text2">O restaurante que te oferece:</h1>
+       <ol>
+            <li class="textLi">Os melhores pratos</li>
+            <li class="textLi">Feitos pelos melhores cozinheiros</li>
+            <li class="textLi">E com a mais rápida entrega da região</li>
+       </ol>
+    </div>
+</body>
+

@@ -77,7 +77,7 @@ namespace backend.Controllers
                 };
 
                 await HttpContext.SignInAsync(principal, props);
-                return Redirect("/Home");
+                return Redirect("/Produtos");
             }
             else
             {

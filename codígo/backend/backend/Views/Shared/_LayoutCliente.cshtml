@@ -63,6 +63,7 @@
         .footer{
             width:100%;
             display: flex;
+            min-height:7vh;
             align-items: center;
             justify-content: center;
         }
@@ -76,14 +77,14 @@
         <nav class="containerNav">
             <div class="containerDiv">
                 <ul class="containerUl">
-                    <li class="btn btn-outline-dark">
-                        <a>Início</a>
+                    <li class="btn btn-outline-light">
+                        <a class="text-light" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
                     </li>
-                    <li class="btn btn-outline-dark">
-                        <a>Cardápio</a>
+                    <li class="btn btn-outline-light">
+                        <a class="text-light" asp-area="" asp-controller="Cliente" asp-action="CardapioPprincipal">Cardápio</a>
                     </li>
-                    <li class="btn btn-outline-dark">
-                        <a>Pedidos</a>
+                    <li class="btn btn-outline-light">
+                        <a class="text-light" asp-area="" asp-controller="Cliente" asp-action="">Pedidos</a>
                     </li>
                 </ul>
             </div>

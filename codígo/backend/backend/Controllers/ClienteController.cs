@@ -32,9 +32,9 @@ namespace backend.Controllers
             return View(await _context.Produtos.ToListAsync());
         }
 
-        public async Task<IActionResult> Pedidos()
+        public IActionResult Pedidos()
         {
-            return View(await _context.Produtos.ToListAsync());
+            return View();
         }
 
         private bool ProdutoExists(int id)
