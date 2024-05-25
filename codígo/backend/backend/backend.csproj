@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Mesas\Details.cshtml" />
     <Content Remove="Views\Produtos\Component.razor" />
+    <Content Remove="Views\StatusPedidos\Details.cshtml" />
     <Content Remove="wwwroot\assets\277c5d28-d8cc-4cb7-9b7f-f93519fd2305Hamburguer.jpg" />
     <Content Remove="wwwroot\assets\27d7283b-47e8-418c-b94b-2fbb1fae8003hamburguer2.jpg" />
     <Content Remove="wwwroot\assets\4aba146e-c988-4def-b0f3-5960b178a369BatataFrita.jpeg" />
