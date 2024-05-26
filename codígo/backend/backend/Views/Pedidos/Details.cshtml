@@ -30,6 +30,33 @@
         </dd>
     </dl>
 </div>
+
+<div>
+    <h4>Produtos</h4>
+    <hr />
+    <table class="table"
+        <thread>
+            <tr>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Preço Unitário</th>
+                <th>Total</th>
+            </tr>
+        </thread>
+        <tbody>
+            @foreach (var item in Model.ItemPedidos)
+            {
+                    <tr>
+                        <td>@item.Produto.Nome</td>
+                        <td>@item.Quantidade</td>
+                        <td>@item.Produto.Valor</td>
+                        <td>@(item.Quantidade * item.Produto.Valor)</td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
 <div>
     <a class="btn btn-primary" asp-action="Index">Voltar</a> |
     <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>

@@ -36,6 +36,8 @@ namespace backend.Controllers
             var pedido = await _context.Pedidos
                 .Include(p => p.Mesa)
                 .Include(p => p.Status)
+                .Include(p => p.ItemPedidos)
+                    .ThenInclude(ip => ip.Produto)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (pedido == null)
             {
