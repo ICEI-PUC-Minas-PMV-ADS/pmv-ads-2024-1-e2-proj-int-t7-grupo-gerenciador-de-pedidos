@@ -26,6 +26,6 @@ namespace backend.Models
         [ForeignKey("MesaId")]
         public Mesa Mesa { get; set; }
 
-        public ICollection<ItemPedido> ItemPedidos { get; set; }
+        public ICollection<ItemPedido> ItemPedidos { get; set; } = new List<ItemPedido>();
     }
 }
