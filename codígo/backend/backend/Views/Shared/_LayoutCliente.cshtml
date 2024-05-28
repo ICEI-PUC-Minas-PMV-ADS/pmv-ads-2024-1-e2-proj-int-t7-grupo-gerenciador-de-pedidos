@@ -8,10 +8,17 @@
     <title>@ViewData["Title"] - EasyEats </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <style>
-        .options{
-            min-height:83.9vh;
+        .main{
+            display:flex;
+            flex-direction:column;
+            max-height:100%;
             max-width: 500px;
             min-width: 320px;
+        }
+        .options{
+            max-width: 500px;
+            min-width: 320px;
+            min-height:400px;
         }
         .color-wine{
             background: #AF3333;
@@ -81,7 +88,7 @@
                         <a class="text-light" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
                     </li>
                     <li class="btn btn-outline-light">
-                        <a class="text-light" asp-area="" asp-controller="Cliente" asp-action="CardapioPprincipal">Cardápio</a>
+                        <a class="text-light" asp-area="" asp-controller="Cliente" asp-action="CardapioLanches">Cardápio</a>
                     </li>
                     <li class="btn btn-outline-light">
                         <a class="text-light" asp-area="" asp-controller="Cliente" asp-action="">Pedidos</a>
@@ -91,7 +98,7 @@
         </nav>
     </header>
     <div class="options">
-        <main role="main" class="pb-3">
+        <main role="main" class="main">
             @RenderBody()
         </main>
     </div>

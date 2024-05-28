@@ -32,10 +32,9 @@ namespace backend.Models
     }
     public enum Categorias
     {
-        PratoPrincipal,
-        Entradas,
-        Petiscos,
+        Lanches,
         Bebidas,
-        Sobremesa
+        Sobremesas,
+        Outros
     }
 }
