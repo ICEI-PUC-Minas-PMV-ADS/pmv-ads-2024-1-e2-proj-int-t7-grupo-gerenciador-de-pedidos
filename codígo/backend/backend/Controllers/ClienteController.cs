@@ -23,23 +23,59 @@ namespace backend.Controllers
         {
             return View(await _context.Produtos.ToListAsync());
         }
-        public async Task<IActionResult> CardapioPprincipal()
+
+        public async Task<IActionResult> CardapioLanches()
         {
-            return View(await _context.Produtos.ToListAsync());
-        }
-        public async Task<IActionResult> CardapioBebidas()
-        {
-            return View(await _context.Produtos.ToListAsync());
+            var produtos = await _context.Produtos
+                .Where(p => p.Categoria == Categorias.Lanches).ToListAsync();
+
+            return View(produtos);
         }
 
-        public IActionResult Pedidos()
+        public async Task<IActionResult> CardapioBebidas()
+        {
+            var produtos = await _context.Produtos
+                .Where(p => p.Categoria == Categorias.Bebidas).ToListAsync();
+
+            return View(produtos);
+        }
+        public async Task<IActionResult> CardapioSobremesas()
+        {
+            var produtos = await _context.Produtos
+                .Where(p => p.Categoria == Categorias.Sobremesas).ToListAsync();
+
+            return View(produtos);
+        }
+        public async Task<IActionResult> CardapioOutros()
+        {
+            var produtos = await _context.Produtos
+                .Where(p => p.Categoria == Categorias.Outros).ToListAsync();
+
+            return View(produtos);
+        }
+
+        public async Task<IActionResult> Pedidos(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            
+            var produto = await _context.Produtos.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (produto == null) return NotFound();
+
+            return View(produto);
+        }
+        public IActionResult ConfirmarPedido()
         {
             return View();
         }
 
-        private bool ProdutoExists(int id)
+        /*private bool ProdutoExists(int id)
         {
-            return _context.Produtos.Any(e => e.Id == id);
+            return _context.Produtos.Any(e => e.Id == id); =>  ainda não achamos o pilantra
         }
+        */
     }
 }

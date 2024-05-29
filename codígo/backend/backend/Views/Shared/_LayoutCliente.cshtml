@@ -8,34 +8,39 @@
     <title>@ViewData["Title"] - EasyEats </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <style>
-        .options{
-            min-height:83.9vh;
+        .body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            min-width: 230px;
+            max-width: 500px;
+            box-sizing:border-box;
+            margin:0;
+            padding: 0;
+        }
+
+        .options {
+            width: 100%;
+            height: 100%;
+        }
+        .main{
+            display:flex;
+            flex-direction:column;
+            max-height:100vh;
             max-width: 500px;
             min-width: 320px;
         }
+        
         .color-wine{
             background: #AF3333;
-        }
-
-        a {
-            color: #b6ff00;
         }
         li{
             list-style-type: none
         }
-        body{
-            display: flex;
-            flex-direction:column;
-            align-items: center;
-            justify-content: center;
-            border:2px solid black;
-            min-width: 230px;
-            max-width: 500px;
-        }
         .header{
             width: 100%;
-        }
-
         }
         .containerNav{
             width:100%;
@@ -81,7 +86,7 @@
                         <a class="text-light" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
                     </li>
                     <li class="btn btn-outline-light">
-                        <a class="text-light" asp-area="" asp-controller="Cliente" asp-action="CardapioPprincipal">Cardápio</a>
+                        <a class="text-light" asp-area="" asp-controller="Cliente" asp-action="CardapioLanches">Cardápio</a>
                     </li>
                     <li class="btn btn-outline-light">
                         <a class="text-light" asp-area="" asp-controller="Cliente" asp-action="">Pedidos</a>
@@ -91,7 +96,7 @@
         </nav>
     </header>
     <div class="options">
-        <main role="main" class="pb-3">
+        <main class="main">
             @RenderBody()
         </main>
     </div>

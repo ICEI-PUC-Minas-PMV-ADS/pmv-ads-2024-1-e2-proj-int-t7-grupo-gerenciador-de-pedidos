@@ -1,74 +1,257 @@
-﻿@model IEnumerable<backend.Models.Produto>
+﻿@model backend.Models.Produto
 
 @{
-    ViewData["Title"] = "Cardápio";
+    ViewData["Title"] = "Pedidos";
     Layout = "~/Views/Shared/_LayoutCliente.cshtml";
 }
 
-<style>
-    .table{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid black;
-        min-width: 230px;
-        max-width: 420px;
-    }
-</style>
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Valor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Imagem)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Valor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Categoria)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Imagem)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
+<head>
+    <style>
+        .body {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid orange;
+            max-width: 100%;
+            min-width: 230px;
+            align-items: center;
+            justify-content: center;
         }
-    </tbody>
-</table>
 
+        .imgHeader{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width:100%;
+            border: solid 1px #090;
+        }
+
+        .imagem {
+            display:flex;
+            width:100vw;
+            max-width:100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .ProdutoContainer{
+            width:100%;
+            height:40%;
+            background: #fff;
+            border: solid 1px #000;
+        }
+
+        .produtoPreco{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 15px;
+            font-size: 20px;
+        }
+        .produtoDetalhes{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border: solid 1px #900;
+        }
+        .descricao{
+            width:70%;
+            display: flex;
+            border: solid 1px #009;
+            justify-content: center;
+            align-items: center;
+            font-size:18px;
+        }
+
+        .pedidoInformacoes {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            flex-grow:1;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            padding: 5px;
+            border: solid 1px #009;
+        }
+        .quantidade{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            border: solid 1px #000;
+            gap:5px;
+        }
+        .mesa{
+            border: solid 1px #009;
+        }
+
+        .preparo {
+            width:100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .btnPreparo{
+            text-decoration: none;
+            color: white;
+            background-color: #F88805;
+            border-start-end-radius:20px;
+            border-start-start-radius: 5px;
+            border-end-end-radius: 5px;
+            border-end-start-radius: 20px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .btnPreparo:hover{
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .bkgBlur{
+            display:flex;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.33);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(7.8px);
+            -webkit-backdrop-filter: blur(7.8px);
+            width: 100vw;
+            height:100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .confirmaPedido{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width:300px;
+            height: 150px;
+            top: 20vh;
+            right: 16vw;
+            background-color: #AF3333;
+        }
+
+        .confirmaTexto{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-weight:600;
+        }
+
+        .confirmaBotoes {
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content:space-between;
+        }
+
+        .confirmaSim{
+            text-decoration: none;
+            color: white;
+            background-color: #00AF07;
+            border-start-end-radius: 20px;
+            border-start-start-radius: 5px;
+            border-end-end-radius: 5px;
+            border-end-start-radius: 20px;
+            padding: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .confirmaNao{
+            text-decoration: none;
+            color: white;
+            background-color: #E90000;
+            border-start-end-radius: 20px;
+            border-start-start-radius: 5px;
+            border-end-end-radius: 5px;
+            border-end-start-radius: 20px;
+            padding: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="imgHeader">
+        <img class="imagem" src="~/assets/@{ @Html.DisplayFor(model => model.Imagem)}" />
+    </div>
+    <div class="ProdutoContainer">
+        <div class="produtoPreco" >
+            <p> @Html.DisplayFor(model => model.Nome)</p>
+            <p> @Html.DisplayFor(model => model.Valor)</p>
+        </div>
+        <div class="produtoDetalhes">
+            <p class="descricao">@Html.DisplayFor(model => model.Descricao)</p>
+            <div class="pedidoInformacoes">
+                <div class="quantidade">
+                    @{
+                        <a class="btn btn-primary" onclick="atualizaQuantidade(-1)"> - </a>
+                        <p id="quantidadeProduto">1</p>
+                        <a class="btn btn-primary" onclick="atualizaQuantidade(1)"> + </a>
+                    }
+                </div>
+                <div class="mesa">
+                    <p>Mesa: 5</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="preparo">
+            <a class="btnPreparo" onclick="confirmar()">Enviar para preparo!</a>
+        </div>
+        
+    </div>
+    
+    <div class="bkgBlur" id="bkgBlur">
+        <div class="confirmaPedido" id="confirmacao">
+            <p class="confirmaTexto">Deseja Realmente enviar esse pedido a cozinha?</p>
+            <div class="confirmaBotoes">
+                <a class="confirmaSim">Sim!</a>
+                <a class="confirmaNao" onclick="negar()">Ainda não</a>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            
+            let quantity = 1;
+
+            window.atualizaQuantidade = function(change) {
+                quantity += change;
+                if (quantity < 1) {
+                    quantity = 1;
+                }
+                document.getElementById('quantidadeProduto').innerText = quantity;
+                document.getElementById('quantityInput').value = quantity;
+            }
+
+
+            window.confirmar = function (change) {
+                var div = document.getElementById('bkgBlur');
+                div.style.display = 'flex';
+            }
+            window.negar = function (change) {
+                var div = document.getElementById('bkgBlur');
+                div.style.display = 'none';
+            }
+        })
+        
+    </script>
+</body>
