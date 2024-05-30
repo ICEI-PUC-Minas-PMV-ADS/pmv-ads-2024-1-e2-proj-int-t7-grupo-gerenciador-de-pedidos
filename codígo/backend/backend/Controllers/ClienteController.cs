@@ -67,6 +67,20 @@ namespace backend.Controllers
 
             return View(produto);
         }
+
+        public async Task<IActionResult> ConfirmaPedidos(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var produto = await _context.Produtos.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (produto == null) return NotFound();
+
+            return View(produto);
+        }
         public IActionResult ConfirmarPedido()
         {
             return View();

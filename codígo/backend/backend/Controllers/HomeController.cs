@@ -18,6 +18,9 @@ namespace backend.Controllers
 
         public IActionResult Index()
         {
+            string mesa = HttpContext.Request.Query["mesa"];
+            ViewBag.Mesa = mesa;
+
             return View();
         }
 
