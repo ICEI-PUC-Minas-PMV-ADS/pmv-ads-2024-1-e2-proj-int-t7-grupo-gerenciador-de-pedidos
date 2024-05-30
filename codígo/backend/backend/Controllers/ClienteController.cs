@@ -74,6 +74,8 @@ namespace backend.Controllers
             {
                 return NotFound();
             }
+            var mesa = HttpContext.Session.GetString("mesa");
+            ViewBag.Mesa = mesa;
 
             var produto = await _context.Produtos.FirstOrDefaultAsync(x => x.Id == id);
 
