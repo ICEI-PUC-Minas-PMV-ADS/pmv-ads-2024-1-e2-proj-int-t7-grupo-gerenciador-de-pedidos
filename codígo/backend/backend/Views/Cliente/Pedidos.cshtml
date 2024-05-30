@@ -115,7 +115,7 @@
         }
 
         .bkgBlur{
-            display:flex;
+            display: none;
             position: absolute;
             background: rgba(255, 255, 255, 0.33);
             border-radius: 16px;
@@ -212,14 +212,14 @@
             
         </div>
         <div class="preparo">
-            <a class="btnPreparo" onclick="confirmar()">Enviar para preparo!</a>
+            <a class="btnPreparo" onclick="confirmar()">Enviar para preparo?</a>
         </div>
         
     </div>
     
     <div class="bkgBlur" id="bkgBlur">
         <div class="confirmaPedido" id="confirmacao">
-            <p class="confirmaTexto">Deseja Realmente enviar esse pedido a cozinha?</p>
+            <p class="confirmaTexto">Deseja realmente enviar esse pedido à cozinha?</p>
             <div class="confirmaBotoes">
                 <a class="confirmaSim">Sim!</a>
                 <a class="confirmaNao" onclick="negar()">Ainda não</a>
