@@ -8,23 +8,9 @@
 
 
 <head>
-    <title>@ViewData["Title"] - Prato Principal</title>
+    <title>@ViewData["Title"] - Outros</title>
     <style>
-        .body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid black;
-            min-width: 230px;
-            width: 100vw;
-            max-width: 500px;
-            border: solid 1px #009;
-        }
-
         .main {
-            margin: 5px;
-            padding: 5px;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -86,11 +72,10 @@
     <main class="main">
         @foreach (var item in Model)
         {
-            <a class="card" asp-action="Pedidos" asp-route-id="@item.Id">
+            <a class="card" asp-action="ConfirmaPedidos" asp-route-id="@item.Id">
                 <div class="imgCard">
                     <img src="~/assets/@{
-                                @item.Imagem
-}"
+                                @item.Imagem}"
                          alt="Produto: @item.Nome"
                          width="80%" height="80%" />
                 </div>
