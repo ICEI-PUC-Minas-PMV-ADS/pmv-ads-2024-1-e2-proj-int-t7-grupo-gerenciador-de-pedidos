@@ -36,9 +36,6 @@ namespace backend.Controllers
             {
                 HttpContext.Session.SetString("mesa", mesa.ToString());
             }
-            
-
-            ViewBag.Mesa = mesa;
 
             return View();
         }
