@@ -234,12 +234,21 @@
                         <div class="textQuantidade">
                             <p class="quantidadeProduto" id="quantidadeProduto">1</p>
                         </div>
-                        
+
                         <a class="btnQuantidade" onclick="atualizaQuantidade(1)"> + </a>
                     }
                 </div>
                 <div class="mesa">
-                    <p>Mesa: 5</p>
+                    @{
+                        string mesa = ViewBag.Mesa;
+                        if(mesa != null)
+                        {
+                            <p>Mesa: @mesa</p>
+                        }
+                        else{ <p>Mesa não encontrada</p>}
+
+                    }
+                    
                 </div>
             </div>
 

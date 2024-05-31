@@ -1,5 +1,6 @@
 using backend.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
@@ -16,10 +17,25 @@ namespace backend.Controllers
             _context = context;
         }
 
+        
+
         public IActionResult Index()
         {
-            string mesa = HttpContext.Request.Query["mesa"];
-            ViewBag.Mesa = mesa;
+            string mesaValue = HttpContext.Request.Query["mesa"];
+
+            if (string.IsNullOrEmpty(mesaValue))
+            {
+                mesaValue = "0";
+            }
+
+            if (!int.TryParse(mesaValue, out int mesa) || mesa <= 0 || mesa > 10)
+            {
+                mesa = 0;
+            }
+            else
+            {
+                HttpContext.Session.SetString("mesa", mesa.ToString());
+            }
 
             return View();
         }
