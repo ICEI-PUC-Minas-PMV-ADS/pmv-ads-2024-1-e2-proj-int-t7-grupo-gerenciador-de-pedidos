@@ -1,9 +1,11 @@
 ﻿using backend.Models;
+using backend.Services.Azure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Drawing.Text;
 
 namespace backend.Controllers
 {
@@ -11,12 +13,14 @@ namespace backend.Controllers
     public class ProdutosController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly FileUpload _fileUpload;
         private string _filePath;
 
-        public ProdutosController(AppDbContext context, IWebHostEnvironment env)
+        public ProdutosController(AppDbContext context, IWebHostEnvironment env, FileUpload fileUpload)
         {
             _context = context;
             _filePath = env.WebRootPath;
+            _fileUpload = fileUpload;
         }
 
         //GET
@@ -60,8 +64,8 @@ namespace backend.Controllers
                     return View(produto);
 
 
-                var nome = SaveFile(anexo);
-                produto.Imagem = nome;
+                var nome =  await SaveFileAsync(anexo);
+                produto.Imagem = nome.ToString();
 
 
             
@@ -78,10 +82,17 @@ namespace backend.Controllers
             if (id == null) return NotFound();
 
             var produto = await _context.Produtos.FindAsync(id);
+            var Img = await _context.Produtos.Select(p => p.Imagem).ToListAsync();
 
             if (produto == null) return NotFound();
 
-            return View(produto);
+            var viewModel = new ProdutoViewModel
+            {
+                Produto = produto,
+                Imagens = Img
+            };
+
+            return View(viewModel);
         }
 
 
@@ -103,14 +114,36 @@ namespace backend.Controllers
                     return View(produto);
 
 
-                var nome = SaveFile(anexo);
-                produto.Imagem = nome;
+                var nome = SaveFileAsync(anexo);
+                produto.Imagem = nome.ToString();
 
                 _context.Update(produto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(produto);
+        }
+
+        public async Task<IActionResult> Imagens()
+        {
+            var produtos = await _context.Produtos.ToListAsync();
+
+            if (produtos == null || !produtos.Any())
+            {
+                return NotFound();
+            }
+
+            var todasImagens = new List<string>();
+
+            foreach (var produto in produtos)
+            {
+                if (produto.Imagens != null && produto.Imagens.Any())
+                {
+                    todasImagens.AddRange(produto.Imagens);
+                }
+            }
+
+            return View(todasImagens);
         }
 
         public async Task<IActionResult> Delete(int? id)
@@ -146,23 +179,12 @@ namespace backend.Controllers
         }
 
 
-        public string SaveFile(IFormFile anexo)
+        public async Task<string> SaveFileAsync(IFormFile anexo)
         {
-            var nome = Guid.NewGuid().ToString() + anexo.FileName;
-
-            var filePath = _filePath + "//assets";
-            if (!Directory.Exists(filePath))
-            {
-                Directory.CreateDirectory(filePath);
-            }
-
-            using (var stream = System.IO.File.Create(filePath + "\\" + nome))
-            {
-                anexo.CopyToAsync(stream);
-            }
-
-            return nome;
+            var nameUri = await _fileUpload.UploadAsync(anexo);
+            return nameUri.ToString();
         }
+        
 
         public bool ImageIsValid(IFormFile anexo)
         {

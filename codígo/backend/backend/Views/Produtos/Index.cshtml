@@ -34,13 +34,13 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                R$@Html.DisplayFor(modelItem => item.Valor)
+                @Html.DisplayFor(modelItem => item.Valor)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Categoria)
             </td>
             <td>
-                <img src=".\assets\@{ @item.Imagem }" width="70" height="70"/>
+                    <img src="@Html.DisplayFor(modelItem => item.Imagem)" width="100"/>
             </td>
             <td>
                 <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |

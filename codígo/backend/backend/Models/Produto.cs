@@ -25,8 +25,13 @@ namespace backend.Models
         [Display(Name = "Categoria")]
         public Categorias Categoria { get; set; }
 
+        private string _imagem;
+
         [Display(Name = "Imagem")]
         public string Imagem { get; set; }
+
+        [NotMapped]
+        public List<string> Imagens { get; set; } = new List<string>();
 
         public ICollection<ItemPedido> ItemPedidos { get; set; }
     }

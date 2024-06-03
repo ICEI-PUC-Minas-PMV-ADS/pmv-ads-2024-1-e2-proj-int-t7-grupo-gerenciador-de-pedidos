@@ -1,8 +1,116 @@
-﻿@model backend.Models.Produto
+﻿@model backend.Models.ProdutoViewModel
 
 @{
     ViewData["Title"] = "Edit";
 }
+<head>
+    <style>
+        .formContainer {
+            display: flex;
+            flex-direction:column;
+            gap: 10px;
+        }
+
+        .ImagemEdit{
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+        }
+
+        .Btn{
+            width:15vw;
+        }
+
+        .BkgBlur{
+            display:none;
+            align-items:center;
+            justify-content:center;
+            position: absolute;
+            width:100%;
+            height:calc(100vh);
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.36);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10.1px);
+            -webkit-backdrop-filter: blur(10.1px);
+
+        }
+
+        .ImagemWindow{
+            background-color: #571D10;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            height: 80%;
+            border-radius: 20px;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .CloseWindow {
+            display: flex;
+            justify-content:end;
+            width:100%;
+            height:10%;
+
+        }
+
+        .CloseImage{
+            display: flex;
+            height: 100%;
+            transition: transform 0.2s;
+            cursor:pointer;
+        }
+
+        .CloseImage:hover {
+            transform: scale(1.2);
+            transition: transform 0.2s;
+        }
+
+        .ImageContainer{
+            display:flex;
+            flex-direction: row;
+            align-items:center;
+            justify-content:center;
+            border-radius:20px;
+            gap:15px;
+            flex-wrap: wrap;
+            padding: 20px;
+            width: 100%;
+            height: 80%;
+
+            
+        }
+        
+        .ImageCard{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            background-color: #fff;
+            width:150px;
+            height:150px;
+            border-radius:12px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .ImageCard:hover{
+            transform: scale(1.1);
+                transition: transform 0.2s;
+            }
+        
+
+        .Imagem{
+            width:85%;
+            height:85%;
+        }
+        
+    </style>
+
+</head>
+
 
 <h1>Editar</h1>
 
@@ -12,37 +120,80 @@
     <div class="col-md-4">
         <form asp-action="Edit" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
+            <input type="hidden" asp-for="Produto.Id" />
+            <div class="formContainer">
+                <div class="form-group">
+                    <label asp-for="Produto.Nome" class="control-label"></label>
+                    <input asp-for="Produto.Nome" class="form-control" />
+                    <span asp-validation-for="Produto.Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Produto.Descricao" class="control-label"></label>
+                    <input asp-for="Produto.Descricao" class="form-control" />
+                    <span asp-validation-for="Produto.Descricao" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Produto.Valor" class="control-label"></label>
+                    <input asp-for="Produto.Valor" class="form-control" />
+                    <span asp-validation-for="Produto.Valor" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Produto.Categoria" class="control-label"></label>
+                    <select asp-for="Produto.Categoria" class="form-control" asp-items="Html.GetEnumSelectList<Categorias>()"></select>
+                    <span asp-validation-for="Produto.Categoria" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Produto.Imagem" class="control-label"></label>
+                    <input asp-for="Produto.Imagem" class="form-control" type="file" name="anexo" />
+                    <span asp-validation-for="Produto.Imagem" class="text-danger"></span>
+                </div>
+                <div class="form-group ImagemEdit">
+                    <label class="control-label">Imagem da Galeria</label>
+                    <div class="btn btn-success Btn" onclick="escolher()" >Escolher</div>
+                    <span class="NomeImagem"></span>
+                    <span asp-validation-for="Produto.Imagem" class="text-danger"></span>
+                </div>
+                <div class="form-group ImagemEdit">
+                    <label class="control-label">Tirar Foto no Celular</label>
+                    <div class="btn btn-outline-info Btn">QrCode</div>
+                    <span class="NomeImagem"></span>
+                    <span asp-validation-for="Produto.Imagem" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Valor" class="control-label"></label>
-                <input asp-for="Valor" class="form-control" />
-                <span asp-validation-for="Valor" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Categoria" class="control-label"></label>
-                <select asp-for="Categoria" class="form-control" asp-items="Html.GetEnumSelectList<Categorias>()"></select>
-                <span asp-validation-for="Categoria" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Imagem" class="control-label"></label>
-                <input asp-for="Imagem" class="form-control" type="file" name="anexo"/>
-                <span asp-validation-for="Imagem" class="text-danger"></span>
-                
-            </div>
-            
         </form>
     </div>
 </div>
+<div id="BkgBlur" class="BkgBlur">
+    <div class="ImagemWindow">
+        <div id="fecharescolher()" class="CloseWindow">
+            <img class="CloseImage" src="~/assets/ToWebdesign/CloseWindow.svg" alt="CloseWindow" onclick="fecharEscolher()" />
+        </div>
+        <div class="ImageContainer">
+            @foreach (var img in Model.Imagens)
+            {
+                <div class="ImageCard">
+                    <img src="@img" class="Imagem" />
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', async function () {
+
+        window.escolher = function (change) {
+            var div = document.getElementById('BkgBlur');
+            div.style.display = 'flex';
+        }
+        window.fecharEscolher = function (change) {
+            var div = document.getElementById('BkgBlur');
+            div.style.display = 'none';
+        }
+    })
+</script>
+
+
 <hr />
 <div class="form-group">
     <a class="btn btn-primary" asp-action="Index">Voltar</a> |
@@ -52,4 +203,6 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+
 }
