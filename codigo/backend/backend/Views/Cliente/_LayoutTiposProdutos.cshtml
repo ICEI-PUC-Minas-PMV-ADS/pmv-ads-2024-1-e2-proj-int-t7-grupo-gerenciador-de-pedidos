@@ -32,7 +32,9 @@
             color: aliceblue;
             font-weight: 700;
         }
-
+        .header:{
+            width:100vw;
+        }
         .navTipos {
             margin: 2vh 1vw;
             display: flex;
@@ -58,14 +60,12 @@
         <img class="imagemApresentation" src="~/assets/ToWebdesign/BkgOrangeBlock.svg" />
         <p class="image-text">Cardápio Digital</p>
     </nav>
-    <header>
-        <nav class="navTipos">
-            <a class="navProdutos" asp-area="" asp-controller="Cliente" asp-action="CardapioLanches">Lanches</a>
-            <a class="navProdutos" asp-area="" asp-controller="Cliente" asp-action="CardapioBebidas"> Bebidas </a>
-            <a class="navProdutos" asp-area="" asp-controller="Cliente" asp-action="CardapioSobremesas"> Sobremesas </a>
-            <a class="navProdutos" asp-area="" asp-controller="Cliente" asp-action="CardapioOutros"> Outros </a>
-        </nav>
-    </header>
+    <nav class="navTipos">
+        <a class="navProdutos" asp-area="" asp-controller="Cliente" asp-action="CardapioLanches">Lanches</a>
+        <a class="navProdutos" asp-area="" asp-controller="Cliente" asp-action="CardapioBebidas"> Bebidas </a>
+        <a class="navProdutos" asp-area="" asp-controller="Cliente" asp-action="CardapioSobremesas"> Sobremesas </a>
+        <a class="navProdutos" asp-area="" asp-controller="Cliente" asp-action="CardapioOutros"> Outros </a>
+    </nav>
     <main role="main" >
         @RenderBody()
     </main>

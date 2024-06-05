@@ -74,8 +74,7 @@
         {
             <a class="card" asp-action="ConfirmaPedidos" asp-route-id="@item.Id">
                 <div class="imgCard">
-                    <img src="~/assets/@{
-                                @item.Imagem}"
+                    <img src="@item.Imagem"
                          alt="Produto: @item.Nome"
                          width="80%" height="80%" />
                 </div>

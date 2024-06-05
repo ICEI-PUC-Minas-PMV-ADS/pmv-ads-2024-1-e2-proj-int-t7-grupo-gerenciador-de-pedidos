@@ -7,14 +7,6 @@
 
 <head>
     <style>
-        .body {
-            display: flex;
-            flex-direction: column;
-            max-width: 100%;
-            min-width: 230px;
-            align-items: center;
-            justify-content: center;
-        }
 
         .imgHeader {
             display: flex;
@@ -216,8 +208,7 @@
 
 <body class="body">
     <div class="imgHeader">
-        <img class="imagem" src="~/assets/@{
-            @Html.DisplayFor(model => model.Imagem)
+        <img class="imagem" src="@Html.DisplayFor(model => model.Imagem)"
 }" />
     </div>
     <div class="ProdutoContainer">
