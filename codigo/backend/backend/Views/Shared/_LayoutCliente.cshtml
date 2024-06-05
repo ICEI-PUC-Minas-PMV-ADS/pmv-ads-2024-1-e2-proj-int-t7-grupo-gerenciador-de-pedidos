@@ -1,0 +1,60 @@
+﻿@using System.Security.Claims
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EasyEats </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        .ContainerNav{
+            align-items:center;
+        }
+
+        .UlNav{
+            flex-direction:row;
+            width:100%;
+            justify-content:space-around;
+        }
+
+        .footer{
+            margin-top: 15vh;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar ContainerNav" style="background-color: #e3f2fd;">
+        <ul class="navbar-nav UlNav">
+            <li class="navbar-brand LiNav">
+                <a class="BtnNav" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+            </li>
+            <li class="navbar-brand LiNav">
+                <a class="BtnNav" asp-area="" asp-controller="Cliente" asp-action="CardapioLanches">Cardápio</a>
+            </li>
+            <li class="navbar-brand LiNav">
+                <a class="BtnNav" asp-area="" asp-controller="Cliente" asp-action="Pedido">Pedido</a>
+            </li>
+        </ul>
+        
+    </nav>
+    
+    <div class="options">
+        <main class="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <p class="footer text-center justify-content-center">©Todos os direitos reservados</p>
+    </footer>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
