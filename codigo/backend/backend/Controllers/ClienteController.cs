@@ -58,7 +58,7 @@ namespace backend.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return View();
             }
             
             var produto = await _context.Produtos.FirstOrDefaultAsync(x => x.Id == id);

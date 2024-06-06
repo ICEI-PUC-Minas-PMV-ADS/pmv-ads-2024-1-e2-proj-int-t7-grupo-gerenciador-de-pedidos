@@ -1,91 +1,47 @@
-﻿@model backend.Models.Produto
+﻿@model IEnumerable<backend.Models.Produto>
 
 @{
     ViewData["Title"] = "Pedidos";
     Layout = "~/Views/Shared/_LayoutCliente.cshtml";
 }
 
+
+
 <head>
-    <title>@ViewData["Title"] - Outros</title>
     <style>
-        .main {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-content: center;
-            flex-grow: 1;
-            flex-flow: wrap;
-            gap: 8px;
-            overflow: hidden;
-            overflow-y: auto;
-        }
-
-        .card {
-            text-decoration: none;
-            width: 130px;
-            height: 130px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 1px 1px 2px black;
-        }
-
-        .imgCard {
-            background: #CECECE;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
+        .containerImagem {
             width: 100%;
-            min-height: 70%;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0;
+            padding: 0;
         }
 
-        .textCard {
-            background: #FFFFFF;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
+        .imagemApresentation {
+            background-size: cover;
             width: 100%;
-            min-height: 30%;
+            display: block;
+        }
+
+        .image-text {
             display: flex;
             align-items: center;
+            justify-content: center;
+            font-size: 8vw;
             text-align: center;
-            justify-content: center;
-            color: #66482B;
-            text-decoration: none;
-            font-size: 85%;
+            position: absolute;
+            color: aliceblue;
+            font-weight: 700;
         }
-
-        .imagem {
-            list-style-type: none;
-        }
-
-        a {
-        }
-
     </style>
-
 </head>
 
-<!--
-<body class="body">
-    <main class="main">
-        foreach (var item in Model)
-        {
-            <a class="card" asp-action="ConfirmaPedidos" asp-route-id="item.Id">
-                <div class="imgCard">
-                    <img src="~/assets/{
-                                    item.Imagem}"
-                         alt="Produto: item.Nome"
-                         width="80%" height="80%" />
-                </div>
-                <p class="textCard"> item.Nome</p>
-            </a>
-        }
-        
-    </main>
-    
 
-
+<body>
+    <nav class="containerImagem">
+        <img class="imagemApresentation" src="~/assets/ToWebdesign/BkgOrangeBlock.svg" />
+        <p class="image-text">Pedidos</p>
+    </nav>
 </body>
--->
+
