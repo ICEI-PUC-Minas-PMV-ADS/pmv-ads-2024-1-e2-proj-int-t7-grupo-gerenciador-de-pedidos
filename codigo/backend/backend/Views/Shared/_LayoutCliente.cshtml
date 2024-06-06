@@ -10,6 +10,8 @@
     <style>
         .ContainerNav{
             align-items:center;
+             background: #AF3333;
+
         }
 
         .UlNav{
@@ -19,13 +21,32 @@
         }
 
         .footer{
-            margin-top: 15vh;
+            background: #AF3333;
+            height:10vh;
+            display:flex;
+            justify-content:center;
+            align-items:center
+        }
+        .body{
+            display:flex;
+            height:100vh;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .BtnNav{
+            color:white 
+        }
+        .p{
+            margin:0 !important 
+        }
+        .options{
+            height:100%
         }
     </style>
 </head>
 
-<body>
-    <nav class="navbar ContainerNav" style="background-color: #e3f2fd;">
+<body class="body">
+    <nav class="navbar ContainerNav">
         <ul class="navbar-nav UlNav">
             <li class="navbar-brand LiNav">
                 <a class="BtnNav" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
@@ -34,7 +55,7 @@
                 <a class="BtnNav" asp-area="" asp-controller="Cliente" asp-action="CardapioLanches">Cardápio</a>
             </li>
             <li class="navbar-brand LiNav">
-                <a class="BtnNav" asp-area="" asp-controller="Cliente" asp-action="Pedido">Pedido</a>
+                <a class="BtnNav" asp-area="" asp-controller="Cliente" asp-action="Pedidos">Pedido</a>
             </li>
         </ul>
         
@@ -46,8 +67,8 @@
         </main>
     </div>
 
-    <footer>
-        <p class="footer text-center justify-content-center">©Todos os direitos reservados</p>
+    <footer class="footer">
+        <p class="p">©Todos os direitos reservados</p>
     </footer>
     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
