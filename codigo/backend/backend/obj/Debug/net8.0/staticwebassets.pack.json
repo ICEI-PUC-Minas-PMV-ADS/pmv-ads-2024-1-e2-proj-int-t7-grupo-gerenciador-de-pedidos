@@ -1,0 +1,337 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\backend.bundle.scp.css",
+      "PackagePath": "staticwebassets\\backend.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\00e484c7-798f-4c25-9444-9857db8012e1Heineken.jpg",
+      "PackagePath": "staticwebassets\\assets\\00e484c7-798f-4c25-9444-9857db8012e1Heineken.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\16a67861-1385-4738-a656-5a03c1896c66esfirra.jpg",
+      "PackagePath": "staticwebassets\\assets\\16a67861-1385-4738-a656-5a03c1896c66esfirra.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\18401814-dce5-4428-ad76-1cf72725e945esfirra.jpg",
+      "PackagePath": "staticwebassets\\assets\\18401814-dce5-4428-ad76-1cf72725e945esfirra.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\668bf115-bda5-4747-97fe-d11418ebe643MilkshakeCholocale.jpg",
+      "PackagePath": "staticwebassets\\assets\\668bf115-bda5-4747-97fe-d11418ebe643MilkshakeCholocale.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\BackgroundOrange.svg",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\BackgroundOrange.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\BkgOrange.svg",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\BkgOrange.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\BkgOrangeBlock.svg",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\BkgOrangeBlock.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\CloseWindow.svg",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\CloseWindow.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\Logo\\LogoCompleta .svg",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\Logo\\LogoCompleta .svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\Logo\\LogoTexto.svg",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\Logo\\LogoTexto.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\Logo\\bkgHome.jpg",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\Logo\\bkgHome.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\esfirra1.png",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\esfirra1.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\esfirra2.png",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\esfirra2.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\hamb1.png",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\hamb1.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ToWebdesign\\hamb2.png",
+      "PackagePath": "staticwebassets\\assets\\ToWebdesign\\hamb2.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ac5b98c8-2fce-42e7-8630-c1ff88e3dd77Hamburguer3.jpeg",
+      "PackagePath": "staticwebassets\\assets\\ac5b98c8-2fce-42e7-8630-c1ff88e3dd77Hamburguer3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\cf88a2d6-a5ef-43a3-89b7-4422cddc194cBatataFrita.jpeg",
+      "PackagePath": "staticwebassets\\assets\\cf88a2d6-a5ef-43a3-89b7-4422cddc194cBatataFrita.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\assets\\ee85efd3-133e-4773-a1d4-b8ea45c5cbf7hamburguer2.jpg",
+      "PackagePath": "staticwebassets\\assets\\ee85efd3-133e-4773-a1d4-b8ea45c5cbf7hamburguer2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos\\codigo\\backend\\backend\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.backend.props",
+      "PackagePath": "build\\backend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.backend.props",
+      "PackagePath": "buildMultiTargeting\\backend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.backend.props",
+      "PackagePath": "buildTransitive\\backend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
