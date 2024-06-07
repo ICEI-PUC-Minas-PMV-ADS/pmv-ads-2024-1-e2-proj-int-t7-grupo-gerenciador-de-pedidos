@@ -3,8 +3,6 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
-
 ## Controle de Versão
 
 O projeto segue a seguinte convenção para o nome de branches:
@@ -51,6 +49,14 @@ No quadro abaixo é possível visualizar o andamento do processo de desenvolvime
 <figure> 
   <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/sprint3.png" alt"Quadro de Sprints">
 </figure>
+
+
+#### Etapa 4
+No quadro abaixo é possível visualizar todas as tarefas que ja foram entregues e a parte final do processo de desenvolvimento,com as ultimas tarefas sendo desenvolvidas,com a equipe ja se preparando para fazer ultimos ajustes entregar o sistema.
+
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/etapa4.png" alt"Quadro de Sprints">
+</figure>
  
 
 ### Ferramentas
@@ -58,6 +64,7 @@ No quadro abaixo é possível visualizar o andamento do processo de desenvolvime
 As ferramentas empregadas no projeto são:
 
 - Editor de código: Visual Studio
+- -Ferramentas de Hospedagem: Azure
 - Ferramentas de comunicação: Discord,WhatsApp e Teams
 - Ferramentas de desenho de tela: Figma,Miro e Lucid
 - Quadro de Tasks: GitHub Projects
