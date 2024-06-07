@@ -41,14 +41,14 @@ Também foram utilizadas ferramentas como o Visual Studio para desenvolvimento d
 
 ## Hospedagem
 
-A aplicação esta hospedada na URL :<a href="https://easyeats.azurewebsites.net/?mesa=10">https://easyeats.azurewebsites.net</a>.
+A aplicação esta hospedada na URL :<a href="https://easyeats.azurewebsites.net/?mesa=10">https://easyeats.azurewebsites.net/?mesa=10</a>.
 
 Para hospedagem da nossa solução utilizamos os serviços de hospedagem web da Azure,porém,optamos pelo plano mais simples,para inicialmente evitar gastos, nesse plano a aplicação tem um tempo limite diário de utilização logo pode ocorrer de quando acessar o link acima as páginas não serem carregadas pois a aplicação estará em "stand by" sendo necessário religar a hospedagem.
 
-Obs: A nossa solução é divida em duas áreas(Cliente,Adminstração),ao clicar no link acima você será redirecionado para área do cliente,onde somente é possivel visualização mobile,pois não seria lógico o 
+Obs:  A nossa solução é divida em duas áreas(Cliente,Adminstração),ao clicar no link acima você será redirecionado para área do cliente,onde somente é possivel visualização mobile,pois não seria lógico o 
 acesso do cliente no estabelecimento ser feito por notebooks ou computadores,caso esteja acessando o lado do Cliente pelo notebook será necessário inspecionar a página e acionar a visualização mobile.
 
-Obs: Já a parte do Administrador é possível acessar pelo notebook ou computador normalmente,visto que a gerência terá acesso a aplicação por esses meios.Para acessar o lado do Adminstrador basta inserir
+Obs:  Já a parte do Administrador é possível acessar pelo notebook ou computador normalmente,visto que a gerência terá acesso a aplicação por esses meios.Para acessar o lado do Adminstrador basta inserir
 o caminho /usuarios/login na URl ou clicar no link abaixo e você será redirecionado para a página de login. 
 
 
