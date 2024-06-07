@@ -38,7 +38,7 @@
         }
 
         .produtoDetalhes {
-            margin:10px;
+            margin: 10px;
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -73,7 +73,7 @@
             gap: 5px;
         }
 
-        .btnQuantidade{
+        .btnQuantidade {
             text-decoration: none;
             color: white;
             background-color: #F88805;
@@ -87,16 +87,16 @@
             cursor: pointer;
         }
 
-        .textQuantidade{
+        .textQuantidade {
             display: flex;
-            justify-content:center;
-            align-items:center;
-            height:100%;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
         }
 
-        .quantidadeProduto{
+        .quantidadeProduto {
             display: flex;
-            margin-top:50%;
+            margin-top: 50%;
             justify-content: center;
             align-items: center;
         }
@@ -125,21 +125,23 @@
             cursor: pointer;
         }
 
-        .btnPreparo:hover {
-            transform: scale(1.1);
-            color: white;
-        }
+            .btnPreparo:hover {
+                transform: scale(1.1);
+                color: white;
+            }
 
         .bkgBlur {
             display: none;
+            width: 100vw;
+            height: 100vh;
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background: rgba(255, 255, 255, 0.33);
-            border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(7.8px);
             -webkit-backdrop-filter: blur(7.8px);
-            width: 100vw;
-            height: 100vh;
             align-items: center;
             justify-content: center;
         }
@@ -155,7 +157,7 @@
             top: calc(50% - 200px);
             right: calc(50% - 150px);
             background-color: #AF3333;
-            gap:2vh;
+            gap: 2vh;
         }
 
         .confirmaTexto {
@@ -163,7 +165,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            font-size:5vw;
+            font-size: 5vw;
             color: white;
             font-weight: 600;
         }
@@ -172,11 +174,12 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            width:100%;
+            width: 100%;
             justify-content: space-around;
         }
 
         .confirmaSim {
+            border: none;
             text-decoration: none;
             color: white;
             background-color: #00AF07;
@@ -209,7 +212,7 @@
 <body class="body">
     <div class="imgHeader">
         <img class="imagem" src="@Html.DisplayFor(model => model.Imagem)"
-}" />
+             }" />
     </div>
     <div class="ProdutoContainer">
         <div class="produtoPreco">
@@ -221,22 +224,24 @@
             <div class="pedidoInformacoes">
                 <div class="quantidade">
                     @{
-                            <a class="btnQuantidade" onclick="atualizaQuantidade(-1)"> - </a>
-                            <div class="textQuantidade">
-                                <p class="quantidadeProduto" id="quantidadeProduto">1</p>
-                            </div>
+                        <a class="btnQuantidade" onclick="atualizaQuantidade(-1)"> - </a>
+                        <div class="textQuantidade">
+                            <p class="quantidadeProduto" id="quantidadeProduto">1</p>
+                        </div>
 
-                            <a class="btnQuantidade" onclick="atualizaQuantidade(1)"> + </a>
+                        <a class="btnQuantidade" onclick="atualizaQuantidade(1)"> + </a>
                     }
                 </div>
                 <div class="mesa">
                     @{
                         string mesa = ViewBag.Mesa;
-                        if(mesa != null)
+                        if (mesa != null)
                         {
-                                <p>Mesa: @mesa</p>
+                            <p>Mesa: @mesa</p>
                         }
-                        else{ <p>Mesa não encontrada</p>
+                        else
+                        {
+                            <p>Mesa não encontrada</p>
                         }
 
                     }
@@ -254,12 +259,10 @@
     <div class="bkgBlur" id="bkgBlur">
         <div class="confirmaPedido" id="confirmacao">
             <p class="confirmaTexto">Deseja realmente enviar esse pedido à cozinha?</p>
-            <div class="confirmaBotoes">
-                <form asp-action="PedidoSend">
-                <input type="submit" value="Sim!" class="btn btn-success" />
+            <form class="confirmaBotoes" asp-action="PedidoSend">
+                <input type="submit" value="Sim" class="confirmaSim" />
                 <a class="confirmaNao" onclick="negar()">Ainda não</a>
-                </form>
-            </div>
+            </form>
         </div>
 
     </div>
@@ -267,25 +270,25 @@
     <script>
         document.addEventListener('DOMContentLoaded', async function () {
 
-        let quantity = 1;
+            let quantity = 1;
 
-        window.atualizaQuantidade = function (change) {
-        quantity += change;
-        if (quantity < 1) {
-        quantity = 1;
-        }
-        document.getElementById('quantidadeProduto').innerText = quantity;
-        document.getElementById('quantityInput').value = quantity;
-        }
+            window.atualizaQuantidade = function (change) {
+                quantity += change;
+                if (quantity < 1) {
+                    quantity = 1;
+                }
+                document.getElementById('quantidadeProduto').innerText = quantity;
+                document.getElementById('quantityInput').value = quantity;
+            }
 
-        window.confirmar = function (change) {
-        var div = document.getElementById('bkgBlur');
-        div.style.display = 'flex';
-        }
-        window.negar = function (change) {
-        var div = document.getElementById('bkgBlur');
-        div.style.display = 'none';
-        }
+            window.confirmar = function (change) {
+                var div = document.getElementById('bkgBlur');
+                div.style.display = 'flex';
+            }
+            window.negar = function (change) {
+                var div = document.getElementById('bkgBlur');
+                div.style.display = 'none';
+            }
         })
     </script>
 </body>
