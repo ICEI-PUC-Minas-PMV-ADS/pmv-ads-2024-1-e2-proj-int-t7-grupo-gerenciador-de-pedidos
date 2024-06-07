@@ -19,7 +19,11 @@ Implementação do sistema descrita por meio dos requisitos funcionais e/ou não
 
 A aplicação esta hospedada na URL :https://easyeats.azurewebsites.net/?mesa=10.
 
- A nossa solução é divida em duas áreas(Cliente,Adminstração), ao clicar no link acima você será redirecionado para área do cliente(a ideia principal é o acesso ser feito por meio de QRCODE que ficaria fixado na mesa,assim ao apontar a câmera seria redirecionado para o site passando parâmetro mesaId,accesar o link acima é uma simulação desse processo utilizando a mesa 10), onde somente é possivel visualização mobile,pois não seria lógico o acesso do cliente no estabelecimento ser feito por notebooks ou computadores, caso esteja acessando o lado do Cliente pelo notebook será necessário inspecionar a página e acionar a visualização mobile.
+ Inicialmente a aplicação possui um tempo limite diário de utilização pelo serviço de hospedagem azure logo pode ocorrer de quando acessar o link acima as páginas não serem carregadas pois a aplicação estará em "stand by" sendo necessário religar a hospedagem.
+
+ A nossa solução é divida em duas áreas(Cliente,Adminstração), ao clicar no link acima você será redirecionado para área do cliente(a ideia principal é o acesso ser feito por meio de QRCODE que ficaria fixado na mesa,assim ao apontar a câmera seria redirecionado para o site passando parâmetro mesaId,accesar o link acima é uma simulação desse processo utilizando a mesa 10), onde somente é possivel visualização mobile,pois não seria lógico o acesso do cliente no estabelecimento ser feito por notebooks ou computadores.
+ 
+Caso esteja acessando o lado do Cliente pelo notebook será necessário inspecionar a página e acionar a visualização mobile.
 
 Já a parte do Administrador é possível acessar pelo notebook ou computador normalmente, visto que a gerência terá acesso a aplicação por esses meios.
 
