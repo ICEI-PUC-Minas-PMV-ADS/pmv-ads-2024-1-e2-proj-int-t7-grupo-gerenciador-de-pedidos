@@ -33,17 +33,25 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Para implementar a solução a equipe de desenvolvimento utilizou a linguagem C# ASP.NET com o Entity Framework e a biblioteca Session para nos ajudar no armazenamento local de dados,também foi utilizado os serviços da Azure de hospedagem de banco de dados SQL Server,Blob para armazenamento de imagens na nuvem e o serviço de hospedagem na web para que o sistema possa ser colocada em produção.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+
+Também foram utilizadas ferramentas como o Visual Studio para desenvolvimento do código,Azure Data Studio para manipulação e verificação do banco de dados,Discord para comunicação da equipe
+(Dailys,Reuniões de alinhamento e Pair Programming), GitHub e GitHub Projects para versionamento de código e organização de tarefas por meio da metodologia ágil SCRUM.
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+A aplicação esta hospedada na URL :<a href="https://easyeats.azurewebsites.net/?mesa=10">https://easyeats.azurewebsites.net</a>.
 
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+Para hospedagem da nossa solução utilizamos os serviços de hospedagem web da Azure,porém,optamos pelo plano mais simples,para inicialmente evitar gastos, nesse plano a aplicação tem um tempo limite diário de utilização logo pode ocorrer de quando acessar o link acima as páginas não serem carregadas pois a aplicação estará em "stand by" sendo necessário religar a hospedagem.
+
+Obs: A nossa solução é divida em duas áreas(Cliente,Adminstração),ao clicar no link acima você será redirecionado para área do cliente,onde somente é possivel visualização mobile,pois não seria lógico o 
+acesso do cliente no estabelecimento ser feito por notebooks ou computadores,caso esteja acessando o lado do Cliente pelo notebook será necessário inspecionar a página e acionar a visualização mobile.
+
+Obs: Já a parte do Administrador é possível acessar pelo notebook ou computador normalmente,visto que a gerência terá acesso a aplicação por esses meios.Para acessar o lado do Adminstrador basta inserir
+o caminho /usuarios/login na URl ou clicar no link abaixo e você será redirecionado para a página de login. 
+
+
+Lado Adminstrador:<a href="https://easyeats.azurewebsites.net/usuarios/login">https://easyeats.azurewebsites.net/usuarios/login</a>.
+
+Login: admin,  Senha:admin2024
