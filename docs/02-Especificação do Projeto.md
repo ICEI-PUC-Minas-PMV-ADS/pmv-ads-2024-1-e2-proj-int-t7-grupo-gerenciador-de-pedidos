@@ -187,12 +187,12 @@
 <td>Alta</td>
 </tr>
 <tr>
-<td><b>RNF-003</b></td>
+<td><b>RNF-002</b></td>
 <td>A aplicação deve ser intuitiva para pessoas sem experiência</td>
 <td>Alta</td>
 </tr>
 <tr>
-<td><b>RNF-004</b></td>
+<td><b>RNF-003</b></td>
 <td>Deve ser desenvolvido utilizando padrão MVC com SQL Server</td>
 <td>Alta</td>
 </tr>
