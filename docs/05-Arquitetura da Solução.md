@@ -25,7 +25,7 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 
 ## Projeto da Base de Dados
 
-O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade,na imagem a seguir é possível visualizar o projeto da base de dados do sistema a ser desenvolvido.
+O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade, na imagem a seguir é possível visualizar o projeto da base de dados do sistema a ser desenvolvido.
  
 
 <figure> 
@@ -45,7 +45,7 @@ A aplicação esta hospedada na URL :<a href="https://easyeats.azurewebsites.net
 
 Para hospedagem da nossa solução utilizamos os serviços de hospedagem web da Azure,porém,optamos pelo plano mais simples,para inicialmente evitar gastos, nesse plano a aplicação tem um tempo limite diário de utilização logo pode ocorrer de quando acessar o link acima as páginas não serem carregadas pois a aplicação estará em "stand by" sendo necessário religar a hospedagem.
 
-Obs:  A nossa solução é divida em duas áreas(Cliente,Adminstração),ao clicar no link acima você será redirecionado para área do cliente,onde somente é possivel visualização mobile,pois não seria lógico o 
+Obs:  A nossa solução é divida em duas áreas(Cliente,Adminstração), ao clicar no link acima você será redirecionado para área do cliente,onde somente é possivel visualização mobile,pois não seria lógico o 
 acesso do cliente no estabelecimento ser feito por notebooks ou computadores,caso esteja acessando o lado do Cliente pelo notebook será necessário inspecionar a página e acionar a visualização mobile.
 
 Obs:  Já a parte do Administrador é possível acessar pelo notebook ou computador normalmente,visto que a gerência terá acesso a aplicação por esses meios.Para acessar o lado do Adminstrador basta inserir
