@@ -11,7 +11,7 @@ Nesse contexto, destaca-se uma abordagem altamente eficaz para otimizar o uso de
 
 ## Problema
 
-Demora no processo de produção, desde a realização do pedido até a finalização e pagamento. 
+Conforme exposto, o problema que se busca resolver com este projeto é a demora no processo de produção, desde a realização do pedido até a finalização e pagamento. 
 
 
 ## Objetivos
