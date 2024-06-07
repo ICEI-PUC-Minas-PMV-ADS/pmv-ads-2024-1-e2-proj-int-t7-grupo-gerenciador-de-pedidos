@@ -9,7 +9,7 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
 
-Na primeira imagem é possivel visualizar o fluxo do usuário administrador do sistema,onde ele consegue ter todo gerenciamento do fluxo de pedidos e produtos do estabelecimento.
+Na primeira imagem é possivel visualizar o fluxo do usuário administrador do sistema, onde ele consegue ter todo gerenciamento do fluxo de pedidos e produtos do estabelecimento.
 
 <figure> 
   <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/ladoAdminFluxo.jpeg" alt"Fluxo do Usuário Admin">
@@ -32,10 +32,10 @@ Para ter acesso as interações do Wireframing abaixo acesse o Link do projeto f
   <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Cliente.png" alt"Wireframing do lado do Cliente">
 </figure>
 
-Nessa primeira imagem do wireframing é possivél ver todo o sistema do lado do cliente,suas funcionalidades,interfaces e interações do cliente para alcançar seu objetivo.
+Nessa primeira imagem do wireframing é possivél ver todo o sistema do lado do cliente, suas funcionalidades, interfaces e interações do cliente para alcançar seu objetivo.
 
 <figure> 
   <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Gerente.png" alt"Wireframing do lado do Gerente">
 </figure>
 
-Já nessa segunda imagem é possivél ver o sistema do lado do gerente,onde pela inteface mostrada será possivel gerenciar toda parte de pedidos do sistema.
+Já nessa segunda imagem é possivél ver o sistema do lado do gerente, onde pela inteface mostrada será possivel gerenciar toda parte de pedidos do sistema.
