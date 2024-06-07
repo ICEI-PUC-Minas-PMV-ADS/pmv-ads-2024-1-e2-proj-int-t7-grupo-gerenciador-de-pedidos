@@ -7,21 +7,24 @@ Implementação do sistema descrita por meio dos requisitos funcionais e/ou não
 |------|-----------------------------------------|-------------|
 |RF-001| A aplicação deve permitir que o usuário gerente consiga realizar login | UsuariosController.cs / Usuarios.cs / Login.cshtml | AccessDenied.cshtml | Program.cs |
 |RF-002| A aplicação deve permitir adicionar produtos  | ProdutosController.cs / Produto.cs / Create.cshtml | Index.cshtml | assets |
+|RF-003| Deve permitir o gerente visualizar todos os pedidos realizados  | PedidosController.cs / Pedidos.cs / ItemPedido.cs / Index.cshtml | 
+|RF-007| Deve permitir o cliente visualizar os produtos pela sua categoria   | ClienteController.cs / Produto.cs / CardapioBebidas.cshtml | CardapioLanches.cshtml | CardapioSobremesas.cshtml |
+|RF-008| Deve permitir ao gerente dar baixa aos pedidos já pagos  | StatusPedidosController.cs / StatusPedido.cs / Edit.cshtml |
+|RF-009| Deve permitir o cliente navegar entre as páginas da aplicação  | LayoutCliente.cshtml | 
+|RF-010| Deve permitir a escolha de quantidade do produto que vai ser adicionado ao pedido  | PedidosController.cs /  ItemPedidosController.cs /Pedidos.cs / ItemPedido.cs / ConfirmaPedidos.cshtml | 
 |RF-011| A aplicação deve permitir editar um produto  | ProdutosController.cs / Produto.cs / Edit.cshtml | Index.cshtml |
 |RF-012| A aplicação deve permitir deletar um produto  | ProdutosController.cs / Produto.cs / Delete.cshtml | Index.cshtml |
 
 # Instruções de acesso
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+A aplicação esta hospedada na URL :https://easyeats.azurewebsites.net/?mesa=10.
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
+ A nossa solução é divida em duas áreas(Cliente,Adminstração), ao clicar no link acima você será redirecionado para área do cliente(a ideia principal é o acesso ser feito por meio de QRCODE que ficaria fixado na mesa,assim ao apontar a câmera seria redirecionado para o site passando parâmetro mesaId,accesar o link acima é uma simulação desse processo utilizando a mesa 10), onde somente é possivel visualização mobile,pois não seria lógico o acesso do cliente no estabelecimento ser feito por notebooks ou computadores, caso esteja acessando o lado do Cliente pelo notebook será necessário inspecionar a página e acionar a visualização mobile.
 
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+Já a parte do Administrador é possível acessar pelo notebook ou computador normalmente, visto que a gerência terá acesso a aplicação por esses meios.
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+Para acessar o lado do Adminstrador basta inserir o caminho /usuarios/login na URl ou clicar no link abaixo e você será redirecionado para a página de login.
+
+Lado Adminstrador:https://easyeats.azurewebsites.net/usuarios/login.
+
+Login: admin, Senha:admin2024
