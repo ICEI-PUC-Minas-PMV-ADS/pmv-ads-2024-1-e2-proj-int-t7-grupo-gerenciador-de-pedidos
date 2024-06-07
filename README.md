@@ -14,7 +14,6 @@ O objetivo geral deste projeto é desenvolver uma aplicação para gerenciar ped
 * Amaury Vinícius Costa Magno
 * Gustavo Felix Braga
 * Pedro Flávio Ferreira Nogueira
-* Samuel Filipe Nogueira dos Santos
 * Siderley Tadeu Rosa de Oliveira Luciano
 * Vitor Abi-Acl Simões Galinari
 
