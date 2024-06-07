@@ -119,10 +119,10 @@
             cursor: pointer;
         }
 
-        .btnPreparo:hover {
-            transform: scale(1.1);
-            color: white;
-        }
+            .btnPreparo:hover {
+                transform: scale(1.1);
+                color: white;
+            }
 
         .bkgBlur {
             display: none;
@@ -130,8 +130,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width:100vw;
-            height:100vh;
+            width: 100vw;
+            height: 100vh;
             background: rgba(255, 255, 255, 0.33);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(7.8px);
@@ -202,87 +202,88 @@
         }
     </style>
 </head>
-
-        <div class="ImgHeader">
-            <img class="Imagem" src="@Html.DisplayFor(model => model.Imagem)"
-                 }" />
+<body class="body">
+    <div class="ImgHeader">
+        <img class="Imagem" src="@Html.DisplayFor(model => model.Imagem)"/>
+    </div>
+    <div class="ProdutoContainer">
+        <div class="produtoPreco">
+            <p> @Html.DisplayFor(model => model.Nome)</p>
+            <p>R$ @Html.DisplayFor(model => model.Valor)</p>
         </div>
-        <div class="ProdutoContainer">
-            <div class="produtoPreco">
-                <p> @Html.DisplayFor(model => model.Nome)</p>
-                <p>R$ @Html.DisplayFor(model => model.Valor)</p>
-            </div>
-            <div class="produtoDetalhes">
-                <p class="descricao">@Html.DisplayFor(model => model.Descricao)</p>
-                <div class="pedidoInformacoes">
-                    <div class="quantidade">
-                        @{
-                            <a class="btnQuantidade" onclick="atualizaQuantidade(-1)"> - </a>
-                            <div class="textQuantidade">
-                                <p class="quantidadeProduto" id="quantidadeProduto">1</p>
-                            </div>
-
-                            <a class="btnQuantidade" onclick="atualizaQuantidade(1)"> + </a>
-                        }
-                    </div>
-                    <div class="mesa">
-                        @{
-                            string mesa = ViewBag.Mesa;
-                            if (mesa != null)
-                            {
-                                <p>Mesa: @mesa</p>
-                            }
-                            else
-                            {
-                                <p>Mesa não encontrada</p>
-                            }
-                        }
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="preparo">
-                <a class="btnPreparo" onclick="confirmar()">Enviar para preparo!</a>
-            </div>
-
-
-        </div>
-        <div class="bkgBlur" id="bkgBlur">
-            <div class="confirmaPedido" id="confirmacao">
-                <p class="confirmaTexto">Deseja realmente enviar esse pedido à cozinha?</p>
-                <form asp-action="PedidoSend" class="confirmaBotoes">
+        <div class="produtoDetalhes">
+            <p class="descricao">@Html.DisplayFor(model => model.Descricao)</p>
+            <div class="pedidoInformacoes">
+                <div class="quantidade">
                     @{
-                        int mesaValue = int.Parse(ViewBag.Mesa);
-                        <input type="hidden" name="ValueMesa" value="@mesaValue" />
-                        <input type="submit" value="Sim" class="confirmaSim" />
+                        <a class="btnQuantidade" onclick="atualizaQuantidade(-1)"> - </a>
+                        <div class="textQuantidade">
+                            <p class="quantidadeProduto" id="quantidadeProduto">1</p>
+                        </div>
+
+                        <a class="btnQuantidade" onclick="atualizaQuantidade(1)"> + </a>
+                    }
+                </div>
+                <div class="mesa">
+                    @{
+                        string mesa = ViewBag.Mesa;
+                        if (mesa != "0")
+                        {
+                            <p>Mesa: @mesa</p>
+                        }
+                        else
+                        {
+                            <p>Mesa não encontrada</p>
+                        }
                     }
 
-                    <a class="confirmaNao" onclick="negar()">Ainda não</a>
-                </form>
+                </div>
             </div>
         </div>
-<script>
-    document.addEventListener('DOMContentLoaded', async function () {
 
-        let quantity = 1;
+        <div class="preparo">
+            <a class="btnPreparo" onclick="confirmar()">Enviar para preparo!</a>
+        </div>
 
-        window.atualizaQuantidade = function (change) {
-            quantity += change;
-            if (quantity < 1) {
-                quantity = 1;
+
+    </div>
+    <div class="bkgBlur" id="bkgBlur">
+        <div class="confirmaPedido" id="confirmacao">
+            <p class="confirmaTexto">Deseja realmente enviar esse pedido à cozinha?</p>
+            <form asp-action="PedidoSend" class="confirmaBotoes">
+                @{
+                    int mesaValue = int.Parse(ViewBag.Mesa);
+                    <input type="hidden" name="ValueMesa" value="@mesaValue" />
+                    <input type="submit" value="Sim" class="confirmaSim" />
+                }
+
+                <a class="confirmaNao" onclick="negar()">Ainda não</a>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+
+            let quantity = 1;
+
+            window.atualizaQuantidade = function (change) {
+                quantity += change;
+                if (quantity < 1) {
+                    quantity = 1;
+                }
+                document.getElementById('quantidadeProduto').innerText = quantity;
+                document.getElementById('quantityInput').value = quantity;
             }
-            document.getElementById('quantidadeProduto').innerText = quantity;
-            document.getElementById('quantityInput').value = quantity;
-        }
 
-        window.confirmar = function (change) {
-            var div = document.getElementById('bkgBlur');
-            div.style.display = 'flex';
-        }
-        window.negar = function (change) {
-            var div = document.getElementById('bkgBlur');
-            div.style.display = 'none';
-        }
-    })
-</script>
+            window.confirmar = function (change) {
+                var div = document.getElementById('bkgBlur');
+                div.style.display = 'flex';
+            }
+            window.negar = function (change) {
+                var div = document.getElementById('bkgBlur');
+                div.style.display = 'none';
+            }
+        })
+    </script>
+
+</body>

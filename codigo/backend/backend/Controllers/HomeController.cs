@@ -26,9 +26,12 @@ namespace backend.Controllers
             if (string.IsNullOrEmpty(mesaValue))
             {
                 mesaValue = "0";
-                HttpContext.Session.SetString("mesa", mesaValue);
+                
             }
-            else if (!int.TryParse(mesaValue, out int mesa) || mesa <= 0 || mesa > 10)
+            
+        
+            
+            if (!int.TryParse(mesaValue, out int mesa) || mesa <= 0 || mesa > 10)
             {
                 mesa = 0;
             }
@@ -37,7 +40,7 @@ namespace backend.Controllers
                 HttpContext.Session.SetString("mesa", mesa.ToString());
             }
 
-            return View();
+            return View("Index");
         }
 
         public IActionResult Privacy()

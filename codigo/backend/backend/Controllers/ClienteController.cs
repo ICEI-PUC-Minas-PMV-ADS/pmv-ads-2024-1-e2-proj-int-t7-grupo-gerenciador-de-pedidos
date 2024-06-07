@@ -75,7 +75,16 @@ namespace backend.Controllers
                 return NotFound();
             }
             var mesa = HttpContext.Session.GetString("mesa");
-            ViewBag.Mesa = mesa;
+
+            if (string.IsNullOrEmpty(mesa))
+            {
+                ViewBag.Mesa = "0";
+            }
+            else
+            {
+                ViewBag.Mesa = mesa;
+            }
+            
 
             var produto = await _context.Produtos.FirstOrDefaultAsync(x => x.Id == id);
 
@@ -95,27 +104,31 @@ namespace backend.Controllers
             {
                 return RedirectToAction(nameof(CardapioLanches));
             }
-            var pedido = await _context.Pedidos.FirstOrDefaultAsync(x => x.MesaId == ValueMesa);
-
-            if (pedido == null)
+            else
             {
+                var pedido = await _context.Pedidos.FirstOrDefaultAsync(x => x.MesaId == ValueMesa);
 
-                 Pedido newPedido(int mesa)
+                if (pedido != null)
                 {
-                    return new Pedido
+
+                    Pedido newPedido(int mesa)
                     {
-                        Data = DateTime.Now,
-                        StatusId = 2,
-                        MesaId = mesa
-                    };
+                        return new Pedido
+                        {
+                            Data = DateTime.Now,
+                            StatusId = 2,
+                            MesaId = mesa
+                        };
+                    }
+
+                    var novoPedido = newPedido((int)ValueMesa);
+                    await _context.Pedidos.AddAsync(novoPedido);
+                    await _context.SaveChangesAsync();
                 }
 
-                var novoPedido = newPedido((int)ValueMesa);
-                await _context.Pedidos.AddAsync(novoPedido);
-                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(CardapioLanches));
             }
-
-            return RedirectToAction(nameof(CardapioLanches));
+            
         }
 
         /*private bool ProdutoExists(int id)
