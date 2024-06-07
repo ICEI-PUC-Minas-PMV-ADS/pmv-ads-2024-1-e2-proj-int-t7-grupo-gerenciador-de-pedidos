@@ -89,13 +89,13 @@ namespace backend.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PedidoSend()
+        public async Task<IActionResult> PedidoSend(int ValueMesa)
         {
-
-            var mesa = int.Parse(HttpContext.Session.GetString("mesa"));
-            ViewBag.Mesa = mesa;
-
-            var pedido = await _context.Pedidos.FirstOrDefaultAsync(x => x.MesaId == mesa);
+            if(ValueMesa == 0)
+            {
+                return RedirectToAction(nameof(CardapioLanches));
+            }
+            var pedido = await _context.Pedidos.FirstOrDefaultAsync(x => x.MesaId == ValueMesa);
 
             if (pedido == null)
             {
@@ -110,7 +110,7 @@ namespace backend.Controllers
                     };
                 }
 
-                var novoPedido = newPedido(mesa);
+                var novoPedido = newPedido((int)ValueMesa);
                 await _context.Pedidos.AddAsync(novoPedido);
                 await _context.SaveChangesAsync();
             }

@@ -55,7 +55,7 @@
     </style>
 </head>
 
-<body class="body">
+<div>
     <nav class="containerImagem">
         <img class="imagemApresentation" src="~/assets/ToWebdesign/BkgOrangeBlock.svg" />
         <p class="image-text">Cardápio Digital</p>
@@ -66,10 +66,13 @@
         <a class="navProdutos" asp-area="" asp-controller="Cliente" asp-action="CardapioSobremesas"> Sobremesas </a>
         <a class="navProdutos" asp-area="" asp-controller="Cliente" asp-action="CardapioOutros"> Outros </a>
     </nav>
-    <main role="main" >
+    
+</div>
+<div>
+    <main role="main">
         @RenderBody()
     </main>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-</body>
+</div>

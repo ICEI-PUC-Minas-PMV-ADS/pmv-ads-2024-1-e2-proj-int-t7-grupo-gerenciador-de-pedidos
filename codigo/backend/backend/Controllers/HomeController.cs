@@ -26,9 +26,9 @@ namespace backend.Controllers
             if (string.IsNullOrEmpty(mesaValue))
             {
                 mesaValue = "0";
+                HttpContext.Session.SetString("mesa", mesaValue);
             }
-
-            if (!int.TryParse(mesaValue, out int mesa) || mesa <= 0 || mesa > 10)
+            else if (!int.TryParse(mesaValue, out int mesa) || mesa <= 0 || mesa > 10)
             {
                 mesa = 0;
             }

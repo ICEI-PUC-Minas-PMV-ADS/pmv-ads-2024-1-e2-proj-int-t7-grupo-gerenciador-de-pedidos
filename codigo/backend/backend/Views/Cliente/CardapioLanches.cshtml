@@ -8,7 +8,6 @@
 
 
 <head>
-    <title>@ViewData["Title"] - Prato Principal</title>
     <style>
         .main {
             display: flex;
@@ -42,6 +41,10 @@
             align-items: center;
             justify-content: center;
         }
+        .Img{
+            width:80%;
+            height: 80%;
+        }
 
         .textCard {
             background: #FFFFFF;
@@ -68,15 +71,14 @@
     </style>
 
 </head>
-<body class="body">
+<body>
     <main class="main">
         @foreach (var item in Model)
         {
             <a class="card" asp-action="ConfirmaPedidos" asp-route-id="@item.Id">
                 <div class="imgCard">
-                    <img src="@item.Imagem"
-                         alt="Produto: @item.Nome"
-                         width="80%" height="80%" />
+                    <img class="Img" src="@item.Imagem"
+                         alt="Produto: @item.Nome"/>
                 </div>
                 <p class="textCard"> @item.Nome</p>
             </a>

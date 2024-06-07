@@ -7,11 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - EasyEats </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/backend.styles.css" asp-append-version="true" />
     <style>
+        body{
+            margin: 0;
+            padding: 0;
+            border: none;
+            height:100vh;
+        }
+
         .ContainerNav{
             align-items:center;
              background: #AF3333;
-
         }
 
         .UlNav{
@@ -22,14 +30,14 @@
 
         .footer{
             background: #AF3333;
-            height:10vh;
+            height:8vh;
             display:flex;
             justify-content:center;
             align-items:center
         }
         .body{
             display:flex;
-            height:100vh;
+            flex:1;
             flex-direction: column;
             justify-content: space-between;
         }
@@ -42,6 +50,8 @@
         .options{
             height:100%
         }
+
+        
     </style>
 </head>
 
@@ -66,6 +76,7 @@
             @RenderBody()
         </main>
     </div>
+    
 
     <footer class="footer">
         <p class="p">©Todos os direitos reservados</p>
