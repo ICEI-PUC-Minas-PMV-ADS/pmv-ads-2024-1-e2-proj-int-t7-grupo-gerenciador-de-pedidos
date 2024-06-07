@@ -214,19 +214,19 @@
     <div class="ProdutoContainer">
         <div class="produtoPreco">
             <p> @Html.DisplayFor(model => model.Nome)</p>
-            <p> @Html.DisplayFor(model => model.Valor)</p>
+            <p>R$ @Html.DisplayFor(model => model.Valor)</p>
         </div>
         <div class="produtoDetalhes">
             <p class="descricao">@Html.DisplayFor(model => model.Descricao)</p>
             <div class="pedidoInformacoes">
                 <div class="quantidade">
                     @{
-                        <a class="btnQuantidade" onclick="atualizaQuantidade(-1)"> - </a>
-                        <div class="textQuantidade">
-                            <p class="quantidadeProduto" id="quantidadeProduto">1</p>
-                        </div>
+                            <a class="btnQuantidade" onclick="atualizaQuantidade(-1)"> - </a>
+                            <div class="textQuantidade">
+                                <p class="quantidadeProduto" id="quantidadeProduto">1</p>
+                            </div>
 
-                        <a class="btnQuantidade" onclick="atualizaQuantidade(1)"> + </a>
+                            <a class="btnQuantidade" onclick="atualizaQuantidade(1)"> + </a>
                     }
                 </div>
                 <div class="mesa">
@@ -234,12 +234,13 @@
                         string mesa = ViewBag.Mesa;
                         if(mesa != null)
                         {
-                            <p>Mesa: @mesa</p>
+                                <p>Mesa: @mesa</p>
                         }
-                        else{ <p>Mesa não encontrada</p>}
+                        else{ <p>Mesa não encontrada</p>
+                        }
 
                     }
-                    
+
                 </div>
             </div>
 
@@ -254,8 +255,10 @@
         <div class="confirmaPedido" id="confirmacao">
             <p class="confirmaTexto">Deseja realmente enviar esse pedido à cozinha?</p>
             <div class="confirmaBotoes">
-                <a class="confirmaSim">Sim!</a>
+                <form asp-action="PedidoSend">
+                <input type="submit" value="Sim!" class="btn btn-success" />
                 <a class="confirmaNao" onclick="negar()">Ainda não</a>
+                </form>
             </div>
         </div>
 
@@ -264,27 +267,25 @@
     <script>
         document.addEventListener('DOMContentLoaded', async function () {
 
-            let quantity = 1;
+        let quantity = 1;
 
-            window.atualizaQuantidade = function (change) {
-                quantity += change;
-                if (quantity < 1) {
-                    quantity = 1;
-                }
-                document.getElementById('quantidadeProduto').innerText = quantity;
-                document.getElementById('quantityInput').value = quantity;
-            }
+        window.atualizaQuantidade = function (change) {
+        quantity += change;
+        if (quantity < 1) {
+        quantity = 1;
+        }
+        document.getElementById('quantidadeProduto').innerText = quantity;
+        document.getElementById('quantityInput').value = quantity;
+        }
 
-
-            window.confirmar = function (change) {
-                var div = document.getElementById('bkgBlur');
-                div.style.display = 'flex';
-            }
-            window.negar = function (change) {
-                var div = document.getElementById('bkgBlur');
-                div.style.display = 'none';
-            }
+        window.confirmar = function (change) {
+        var div = document.getElementById('bkgBlur');
+        div.style.display = 'flex';
+        }
+        window.negar = function (change) {
+        var div = document.getElementById('bkgBlur');
+        div.style.display = 'none';
+        }
         })
-
     </script>
 </body>

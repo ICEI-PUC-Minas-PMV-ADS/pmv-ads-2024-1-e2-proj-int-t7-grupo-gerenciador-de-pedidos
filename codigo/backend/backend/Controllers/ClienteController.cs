@@ -60,7 +60,7 @@ namespace backend.Controllers
             {
                 return View();
             }
-            
+
             var produto = await _context.Produtos.FirstOrDefaultAsync(x => x.Id == id);
 
             if (produto == null) return NotFound();
@@ -86,6 +86,36 @@ namespace backend.Controllers
         public IActionResult ConfirmarPedido()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PedidoSend()
+        {
+
+            var mesa = int.Parse(HttpContext.Session.GetString("mesa"));
+            ViewBag.Mesa = mesa;
+
+            var pedido = await _context.Pedidos.FirstOrDefaultAsync(x => x.MesaId == mesa);
+
+            if (pedido == null)
+            {
+
+                 Pedido newPedido(int mesa)
+                {
+                    return new Pedido
+                    {
+                        Data = DateTime.Now,
+                        StatusId = 2,
+                        MesaId = mesa
+                    };
+                }
+
+                var novoPedido = newPedido(mesa);
+                await _context.Pedidos.AddAsync(novoPedido);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction(nameof(CardapioLanches));
         }
 
         /*private bool ProdutoExists(int id)
