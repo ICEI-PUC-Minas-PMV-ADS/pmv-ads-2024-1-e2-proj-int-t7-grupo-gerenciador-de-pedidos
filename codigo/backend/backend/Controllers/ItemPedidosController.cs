@@ -21,7 +21,17 @@ namespace backend.Controllers
         // GET: ItemPedidos
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.ItemPedidos.Include(i => i.Pedido).Include(i => i.Produto);
+            var mesaString = HttpContext.Session.GetString("mesa");
+
+            if (string.IsNullOrEmpty(mesaString) || !int.TryParse(mesaString, out int mesa) || mesa <= 0)
+            {
+                return BadRequest("Mesa inválida ou não definida.");
+            }
+
+            var appDbContext = _context.ItemPedidos.Include(i => i.Pedido)
+                                                   .Include(i => i.Produto)
+                                                   .Where(i => i.Pedido.MesaId == mesa);
+
             return View(await appDbContext.ToListAsync());
         }
 
