@@ -260,6 +260,9 @@
         <div class="confirmaPedido" id="confirmacao">
             <p class="confirmaTexto">Deseja realmente enviar esse pedido à cozinha?</p>
             <form class="confirmaBotoes" asp-action="PedidoSend">
+                <input type="hidden" id="produtoId" name="produtoId" value="@Model.Id" />
+                <input type="hidden" id="quantidade" name="quantidade" value="1" />
+                <input type="hidden" id="mesa" name="mesa" value="@int.Parse(mesa)" />
                 <input type="submit" value="Sim" class="confirmaSim" />
                 <a class="confirmaNao" onclick="negar()">Ainda não</a>
             </form>
@@ -278,7 +281,7 @@
                     quantity = 1;
                 }
                 document.getElementById('quantidadeProduto').innerText = quantity;
-                document.getElementById('quantityInput').value = quantity;
+                document.getElementById('quantidade').value = quantity;
             }
 
             window.confirmar = function (change) {

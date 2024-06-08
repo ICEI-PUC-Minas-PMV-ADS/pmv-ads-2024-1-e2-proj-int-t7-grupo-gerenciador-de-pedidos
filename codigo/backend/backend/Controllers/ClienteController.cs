@@ -75,6 +75,10 @@ namespace backend.Controllers
                 return NotFound();
             }
             var mesa = HttpContext.Session.GetString("mesa");
+            if (mesa == null)
+            {
+                mesa = "0";
+            }
             ViewBag.Mesa = mesa;
 
             var produto = await _context.Produtos.FirstOrDefaultAsync(x => x.Id == id);
@@ -89,31 +93,35 @@ namespace backend.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PedidoSend()
+        public async Task<IActionResult> PedidoSend(int produtoId, int quantidade, int mesa)
         {
-
-            var mesa = int.Parse(HttpContext.Session.GetString("mesa"));
-            ViewBag.Mesa = mesa;
-
-            var pedido = await _context.Pedidos.FirstOrDefaultAsync(x => x.MesaId == mesa);
+            var pedido = await _context.Pedidos.Include(p => p.ItemPedidos)
+                                       .FirstOrDefaultAsync(x => x.MesaId == mesa);
 
             if (pedido == null)
             {
-
-                 Pedido newPedido(int mesa)
+                pedido = new Pedido
                 {
-                    return new Pedido
-                    {
-                        Data = DateTime.Now,
-                        StatusId = 2,
-                        MesaId = mesa
-                    };
-                }
-
-                var novoPedido = newPedido(mesa);
-                await _context.Pedidos.AddAsync(novoPedido);
-                await _context.SaveChangesAsync();
+                    Data = DateTime.Now,
+                    StatusId = 2,
+                    MesaId = mesa,
+                    ItemPedidos = new List<ItemPedido>()
+                };
+                _context.Pedidos.Add(pedido);
             }
+
+            var produto = await _context.Produtos.FindAsync(produtoId);
+
+            var itemPedido = new ItemPedido
+            {
+                ProdutoId = produtoId,
+                Quantidade = quantidade,
+                PedidoId = pedido.Id
+            };
+
+            pedido.ItemPedidos.Add(itemPedido);
+
+            await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(CardapioLanches));
         }
