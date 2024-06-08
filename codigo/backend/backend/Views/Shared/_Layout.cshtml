@@ -17,13 +17,31 @@
         .color-wine{
             background: #AF3333;
         }
+
+        .userDiv{
+            display:flex !important;
+            flex-direction:column !important;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .ImagemLogo{
+            width:100px;
+            border-radius:10px;
+            margin-right:20px;
+        }
+
+        .btLogout{
+            width:50%;
+            background: #AF0009
+        }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar  navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow color-wine ">
             <div class="container">
-                <a class="navbar-brand">EasyEats</a>
+                <img class="ImagemLogo" src="~/assets/ToWebdesign/Logo/logo.png" />
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -51,31 +69,16 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Mesas" asp-action="Index">Mesas</a>
                             </li>
                         }
-                        @if(User.IsInRole("User"))
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="CardapioPprincipal">Cardápio</a>
-                            </li>
-                        }
                     </ul>
-                    <ul class="navbar-nav">
+                    <div class="navbar-nav userDiv">
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <li class="nav-item">
                                 <h5 style="flex-direction:row" >
-                                    Bem vindo, @User.Identity.Name
+                                    Bem vindo, @User.Identity.Name!
                                 </h5>
-                                <a class="nav-link text-black" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
-                                
-                            </li>
+                            <a class="nav-link text-black btn btLogout" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
                         }
-                        else
-                        {
-                            <li>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
-                            </li>
-                        }
-                    </ul>
+                    </div>
                 </div>
             </div>
         </nav>

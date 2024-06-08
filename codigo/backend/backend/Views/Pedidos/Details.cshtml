@@ -4,26 +4,25 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h2>Detalhes do Pedido</h2>
 
 <div>
-    <h4>Pedido</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Data)
+            @Html.DisplayNameFor(model => model.Data):
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Data)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
+            @Html.DisplayNameFor(model => model.Status):
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Status.Descricao)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Mesa)
+            @Html.DisplayNameFor(model => model.Mesa):
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Mesa.Id)
@@ -32,7 +31,7 @@
 </div>
 
 <div>
-    <h4>Produtos</h4>
+    <h4>Itens do Pedido</h4>
     <hr />
     <table class="table"
         <thread>
@@ -49,8 +48,8 @@
                     <tr>
                         <td>@item.Produto.Nome</td>
                         <td>@item.Quantidade</td>
-                        <td>@item.Produto.Valor</td>
-                        <td>@(item.Quantidade * item.Produto.Valor)</td>
+                        <td>R$ @item.Produto.Valor</td>
+                        <td>R$ @(item.Quantidade * item.Produto.Valor)</td>
                     </tr>
             }
         </tbody>
