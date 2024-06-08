@@ -29,6 +29,7 @@ namespace backend.Controllers
             }
 
             var appDbContext = _context.ItemPedidos.Include(i => i.Pedido)
+                                                   .ThenInclude(p => p.Status)
                                                    .Include(i => i.Produto)
                                                    .Where(i => i.Pedido.MesaId == mesa);
 
