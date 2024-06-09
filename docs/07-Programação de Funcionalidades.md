@@ -8,6 +8,8 @@ Implementação do sistema descrita por meio dos requisitos funcionais e/ou não
 |RF-001| A aplicação deve permitir que o usuário gerente consiga realizar login | UsuariosController.cs / Usuarios.cs / Login.cshtml | AccessDenied.cshtml | Program.cs |
 |RF-002| A aplicação deve permitir adicionar produtos  | ProdutosController.cs / Produto.cs / Create.cshtml | Index.cshtml | assets |
 |RF-003| Deve permitir o gerente visualizar todos os pedidos realizados  | PedidosController.cs / Pedidos.cs / ItemPedido.cs / Index.cshtml | 
+|RF-004| Deve permitir ao cliente adicionar produtos a sua comanda   | ClienteController.cs / Pedidos.cs / ItemPedido.cs /  ConfirmaPedidos.cshtml | 
+|RF-005| Deve permitir ao cliente visualizar todos os pedidos realizados da comanda | ItemPedidosController.cs / Pedido.cs / ItemPedido.cs / Index.cshtml | 
 |RF-007| Deve permitir o cliente visualizar os produtos pela sua categoria   | ClienteController.cs / Produto.cs / CardapioBebidas.cshtml | CardapioLanches.cshtml | CardapioSobremesas.cshtml |
 |RF-008| Deve permitir ao gerente dar baixa aos pedidos já pagos  | StatusPedidosController.cs / StatusPedido.cs / Edit.cshtml |
 |RF-009| Deve permitir o cliente navegar entre as páginas da aplicação  | LayoutCliente.cshtml | 
