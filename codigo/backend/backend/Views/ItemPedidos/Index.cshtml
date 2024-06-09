@@ -32,6 +32,11 @@
             color: aliceblue;
             font-weight: 700;
         }
+
+        .divSolictConta{
+            display:flex;
+            justify-content:center
+        }
     </style>
 </header>
 
@@ -43,10 +48,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Quantidade</th>
             <th>Produto</th>
-            <th>Status</th>
-            <th></th>
+            <th>Qntd</th>
+            <th>Valor</th>
         </tr>
     </thead>
     <tbody>
@@ -54,15 +58,22 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Quantidade)
-                </td>
-                <td>
                     @Html.DisplayFor(modelItem => item.Produto.Nome)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Pedido.Status.Descricao)
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+                <td>
+                    @{
+                        var valorTotal = item.Produto.Valor * item.Quantidade;
+                    }
+                    R$ @valorTotal
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<div class="divSolictConta">
+<a class="btn btn-success">Solicitar Conta</a>
+</div>
