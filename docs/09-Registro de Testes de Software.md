@@ -9,20 +9,71 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |	Requisito Associado 	| RF-001 - Deve permitir o gerente fazer login. |
 |Registro de evidência | ![Login](img/ct01-LoginAdmin.png?raw=true) |
 
+
 | **Caso de Teste** 	| **CT-02 – Adicionar produtos com gerente** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-002 - Deve permitir ao gerente adicionar produtos. |
 |Registro de evidência | ![Adicionar Produto](img/ct02-InclusaoProduto.png?raw=true) |
+
+
+| **Caso de Teste** 	| **CT-03 – Visualizar pedidos realizados** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-003 - Deve permitir que o gerente visualize todos os pedidos realizados. |
+|Registro de evidência | ![](img/) |
+
+
+| **Caso de Teste** 	| **CT-04 – Adicionar produtos a comando com cliente** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-004 - Deve permitir ao cliente adicionar produtos à sua ordem. |
+|Registro de evidência | ![](img/) |
+
+
+| **Caso de Teste** 	| **CT-05 – Visualizar produtos sob comanda** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-005 - Deve permitir ao cliente visualizar todos os pedidos realizados da encomenda. |
+|Registro de evidência | ![](img/) |
+
+
+| **Caso de Teste** 	| **CT-06 – Finalizar a comanda** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-006 - Deve permitir ao cliente fechar o pedido de pagamento. |
+|Registro de evidência | ![](img/) |
+
+| **Caso de Teste** 	| **CT-07 – Visualizar produtos filtrados por categoria** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-007 - Deve permitir que o cliente visualize os produtos pela sua categoria. |
+|Registro de evidência | ![](img/) |
+
+
+| **Caso de Teste** 	| **CT-08 – Visualizar status dos pedidos** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-008 - Deve permitir ao gerente dar baixa aos pedidos já pagos. |
+|Registro de evidência | ![](img/) |
+
+
+| **Caso de Teste** 	| **CT-09 – Navegar entre as páginas do cardápio** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-009 - Deve permitir que o cliente navegue entre as páginas da aplicação.. |
+|Registro de evidência | ![](img/) |
+
+
+| **Caso de Teste** 	| **CT-10 – Mudar a quantidade dos produtos** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-010 - Deve permitir a escolha da quantidade do produto que será adicionado ao pedido. |
+|Registro de evidência | ![](img/) |
+
 
 | **Caso de Teste** 	| **CT-11 – Editar produtos com gerente** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-011 - Deve permitir ao gerente editar produtos. |
 |Registro de evidência | ![Alterar Produto](img/ct11-TesteAlterarProduto.png?raw=true) |
 
+
 | **Caso de Teste** 	| **CT-12 – Deletar produtos com gerente** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-012 - Deve permitir ao gerente deletar produtos. |
 |Registro de evidência | ![Excluir Produto](img/ct12-ExclusaoProduto.png?raw=true) |
+
 
 ## Avaliação
 
