@@ -48,7 +48,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-08 – Visualizar status dos pedidos** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-008 - Deve permitir ao gerente dar baixa aos pedidos já pagos. |
-|Registro de evidência | ![](img/) |
+|Registro de evidência | ![Staus](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/Status.png) |
 
 
 | **Caso de Teste** 	| **CT-09 – Navegar entre as páginas do cardápio** 	|
