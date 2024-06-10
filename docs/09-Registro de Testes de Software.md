@@ -54,7 +54,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-09 – Navegar entre as páginas do cardápio** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-009 - Deve permitir que o cliente navegue entre as páginas da aplicação.. |
-|Registro de evidência | ![]() |
+|Registro de evidência | ![Fluxuo do Cardapio](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/Fluxuo%20do%20cardapio.jpg) |
 
 
 | **Caso de Teste** 	| **CT-10 – Mudar a quantidade dos produtos** 	|
