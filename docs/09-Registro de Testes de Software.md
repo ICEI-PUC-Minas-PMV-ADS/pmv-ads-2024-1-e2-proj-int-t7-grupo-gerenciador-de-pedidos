@@ -7,13 +7,13 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-01 – Realizar Login** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-001 - Deve permitir o gerente fazer login. |
-|Registro de evidência | ![Login](img/ct01-LoginAdmin.png?raw=true) |
+|Registro de evidência | ![Login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/Login.png) |
 
 
 | **Caso de Teste** 	| **CT-02 – Adicionar produtos com gerente** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-002 - Deve permitir ao gerente adicionar produtos. |
-|Registro de evidência | ![Adicionar Produto](img/ct02-InclusaoProduto.png?raw=true) |
+|Registro de evidência | ![Adicionar Produto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/Cadastro%20de%20Produto.png?raw=true) |
 
 
 | **Caso de Teste** | **CT-03 – Visualizar pedidos realizados** |
@@ -21,24 +21,23 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Requisito Associado | RF-003 - Deve permitir que o gerente visualize todos os pedidos realizados. |
 | Registro de evidência | ![Visualizar pedidos 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/CT-03%20-%20Visualizar%20pedidos%20realizados.png?raw=true)<br>![Visualizar detalhes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/CT-03%20-%20Visualizar%20detalhes%20do%20pedido.png?raw=true) |
 
-
-
 | **Caso de Teste** 	| **CT-04 – Adicionar produtos a comando com cliente** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-004 - Deve permitir ao cliente adicionar produtos à sua ordem. |
-|Registro de evidência | ![](img/) |
+|Registro de evidência | ![]() |
 
 
 | **Caso de Teste** 	| **CT-05 – Visualizar produtos sob comanda** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-005 - Deve permitir ao cliente visualizar todos os pedidos realizados da encomenda. |
-|Registro de evidência | ![](img/) |
+|Registro de evidência | ![Detalhes do Pedido](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/Pedidos.jpg) |
 
 
 | **Caso de Teste** 	| **CT-06 – Finalizar a comanda** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-006 - Deve permitir ao cliente fechar o pedido de pagamento. |
-|Registro de evidência | ![](img/) |
+|Registro de evidência | ![Fechamento do Pediodo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/Confirma%C3%A7%C3%A3o%20cozinha.jpg) |
+
 
 | **Caso de Teste** 	| **CT-07 – Visualizar produtos filtrados por categoria** 	|
 |:---:	|:---:	|
