@@ -42,7 +42,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-07 – Visualizar produtos filtrados por categoria** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-007 - Deve permitir que o cliente visualize os produtos pela sua categoria. |
-|Registro de evidência | ![](img/) |
+|Registro de evidência | ![Visualizar Produtos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/Sobremesas.jpg?raw=true) |
 
 
 | **Caso de Teste** 	| **CT-08 – Visualizar status dos pedidos** 	|
