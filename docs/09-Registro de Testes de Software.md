@@ -54,13 +54,13 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-09 – Navegar entre as páginas do cardápio** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-009 - Deve permitir que o cliente navegue entre as páginas da aplicação.. |
-|Registro de evidência | ![](img/) |
+|Registro de evidência | ![]() |
 
 
 | **Caso de Teste** 	| **CT-10 – Mudar a quantidade dos produtos** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-010 - Deve permitir a escolha da quantidade do produto que será adicionado ao pedido. |
-|Registro de evidência | ![](img/) |
+|Registro de evidência | ![Quantidade](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/quantidade%20de%20items.jpg) |
 
 
 | **Caso de Teste** 	| **CT-11 – Editar produtos com gerente** 	|
