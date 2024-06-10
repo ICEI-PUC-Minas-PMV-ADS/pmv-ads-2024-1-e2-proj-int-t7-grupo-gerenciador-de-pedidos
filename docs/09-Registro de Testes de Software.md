@@ -16,10 +16,11 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Registro de evidência | ![Adicionar Produto](img/ct02-InclusaoProduto.png?raw=true) |
 
 
-| **Caso de Teste** 	| **CT-03 – Visualizar pedidos realizados** 	|
-|:---:	|:---:	|
-|	Requisito Associado 	| RF-003 - Deve permitir que o gerente visualize todos os pedidos realizados. |
-|Registro de evidência | ![](img/) |
+| **Caso de Teste** | **CT-03 – Visualizar pedidos realizados** |
+|:---:|:---:|
+| Requisito Associado | RF-003 - Deve permitir que o gerente visualize todos os pedidos realizados. |
+| Registro de evidência | ![Visualizar pedidos 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/CT-03%20-%20Visualizar%20pedidos%20realizados.png?raw=true)<br>![Visualizar detalhes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/blob/main/docs/img/Registro%20de%20testes%20de%20software/CT-03%20-%20Visualizar%20detalhes%20do%20pedido.png?raw=true) |
+
 
 
 | **Caso de Teste** 	| **CT-04 – Adicionar produtos a comando com cliente** 	|
