@@ -95,6 +95,10 @@ namespace backend.Controllers
         [HttpPost]
         public async Task<IActionResult> PedidoSend(int produtoId, int quantidade, int mesa)
         {
+            if (mesa == 0)
+            {
+                return RedirectToAction(nameof(CardapioLanches));
+            } 
             var pedido = await _context.Pedidos.Include(p => p.ItemPedidos)
                                        .FirstOrDefaultAsync(x => x.MesaId == mesa);
 
