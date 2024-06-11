@@ -65,7 +65,7 @@ namespace backend.Controllers
                     new Claim(ClaimTypes.Role, dados.Grupo.ToString()),
                     new Claim("UserId", dados.Id.ToString())
                 };
-                
+
                 var usuarioIdentity = new ClaimsIdentity(claims, "login");
                 ClaimsPrincipal principal = new ClaimsPrincipal(usuarioIdentity);
 
@@ -107,7 +107,7 @@ namespace backend.Controllers
             var usuario = await _context.Usuarios
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (usuario == null) return NotFound();
-               
+
             return View(usuario);
         }
 
@@ -126,7 +126,7 @@ namespace backend.Controllers
         {
             if (ModelState.IsValid)
             {
-                usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha); 
+                usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -157,7 +157,7 @@ namespace backend.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        
+
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Acesso,Senha,Grupo")] Usuario usuario)
         {
             if (id != usuario.Id)
