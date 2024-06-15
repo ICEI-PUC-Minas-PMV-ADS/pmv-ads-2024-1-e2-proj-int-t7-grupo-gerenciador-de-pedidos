@@ -1,4 +1,4 @@
-# Gerenciador de Pedidos
+# Easy Eats
 
 `Análise e Desenvolvimento de Sistemas`
 
