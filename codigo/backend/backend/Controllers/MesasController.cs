@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
+using QRCoder;
 
 namespace backend.Controllers
 {
@@ -133,6 +134,28 @@ namespace backend.Controllers
         private bool MesaExists(int id)
         {
             return _context.Mesas.Any(e => e.Id == id);
+        }
+
+        [HttpGet("qrcode/{id}")]
+        public IActionResult RetornaQRCodeMesa([FromRoute] int id)
+        {
+            try
+            {
+                if (!MesaExists(id))
+                    throw new Exception("Mesa não existe");
+
+                QRCodeGenerator qrGenerator = new QRCodeGenerator();
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode($"easyeats.azurewebsites.net/?mesa={id}", QRCodeGenerator.ECCLevel.Q);
+                var qrCode = new PngByteQRCode(qrCodeData);
+
+                var base64IMG = Convert.ToBase64String(qrCode.GetGraphic(20));
+
+                return Ok(base64IMG);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

@@ -19,16 +19,85 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumeroMesa)
-            </td>
-            <td>
-                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> 
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroMesa)
+                </td>
+                <td>
+                    <a class="btn btn-primary btnGerarQRCode" data-toggle="modal" data-target="#modalQRCode" data-id="@item.Id">Gerar QR Code</a>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<!-- Modal -->
+<div class="modal fade" id="modalQRCode" tabindex="-1" style="opacity: 1 !important" role="dialog" aria-labelledby="modalQRCodeLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalQRCodeLabel">QR Code Gerado</h5>
+            </div>
+            <div class="modal-body" style="display: flex; flex: auto; margin: 0 auto;">
+                <img id="imgQRCode" style="width: 300px; height: 300px;" src="#" alt="QR Code">
+            </div>
+            <button type="button" style="width: 10%; margin: 0 auto; margin-bottom: 10px;" id="btnFecharModal" class="close btn btn-danger btnFecharModal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var baseUrl = window.location.origin;
+
+        // Adiciona evento de click para cada botão de gerar QR Code
+        var btnGerarQRCode = document.querySelectorAll('.btnGerarQRCode');
+        btnGerarQRCode.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var id = this.getAttribute('data-id');
+                var xhr = new XMLHttpRequest();
+
+                var url = baseUrl + '/qrcode/' + id;
+
+                xhr.open('GET', url, true);
+                xhr.onreadystatechange = function () {
+                    try {
+                        if (xhr.readyState === 4) {
+                            if (xhr.status === 200) {
+                                var imgData = xhr.responseText;
+                                // Encontra a imagem e o modal correspondente ao botão clicado
+                                var modal = document.getElementById('modalQRCode');
+                                var imgQRCode = modal.querySelector('#imgQRCode');
+                                imgQRCode.setAttribute('src', 'data:image/png;base64,' + imgData);
+                                // Mostra o modal após carregar a imagem
+                                modal.style.display = 'block';
+                                modal.classList.add('show');
+                            } else {
+                                alert('Erro ao gerar QR Code');
+                            }
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
+                };
+                xhr.send();
+            });
+        });
+
+        // Adiciona evento de click para fechar o modal
+        var btnFecharModal = document.querySelectorAll('.btnFecharModal');
+        btnFecharModal.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var modal = document.getElementById('modalQRCode');
+                modal.style.display = 'none';
+                modal.classList.remove('show');
+            });
+        });
+    });
+</script>
