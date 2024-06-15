@@ -37,6 +37,84 @@
             display:flex;
             justify-content:center
         }
+
+        .bkgBlur {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.33);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(7.8px);
+            -webkit-backdrop-filter: blur(7.8px);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .confirmaPedido {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            top: calc(50% - 200px);
+            right: calc(50% - 150px);
+            background-color: #AF3333;
+            border-radius: 14px;
+            gap: 2vh;
+        }
+
+        .confirmaTexto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 5vw;
+            color: white;
+            font-weight: 600;
+        }
+
+        .confirmaBotoes {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .confirmaSim {
+            border: none;
+            text-decoration: none;
+            color: white;
+            background-color: #00AF07;
+            border-start-end-radius: 15px;
+            border-start-start-radius: 5px;
+            border-end-end-radius: 5px;
+            border-end-start-radius: 15px;
+            padding: 5px;
+            font-size: 4vw;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .confirmaNao {
+            text-decoration: none;
+            color: white;
+            background-color: #E90000;
+            border-start-end-radius: 15px;
+            border-start-start-radius: 5px;
+            border-end-end-radius: 5px;
+            border-end-start-radius: 15px;
+            padding: 5px;
+            font-size: 4vw;
+            font-weight: 600;
+            cursor: pointer;
+        }
     </style>
 </header>
 
@@ -54,26 +132,66 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @if (!Model.Any())
         {
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Produto.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quantidade)
-                </td>
-                <td>
-                    @{
-                        var valorTotal = item.Produto.Valor * item.Quantidade;
-                    }
-                    R$ @valorTotal
-                </td>
+                <td colspan="3" class="text-center">Não existem pedidos ainda</td>
             </tr>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Produto.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantidade)
+                    </td>
+                    <td>
+                        @{
+                            var valorTotal = item.Produto.Valor * item.Quantidade;
+                        }
+                        R$ @valorTotal
+                    </td>
+                </tr>
+            }
         }
     </tbody>
 </table>
+@if (Model.Any())
+{
+    <div class="confirmaBotoes">
+        <btn class="btn btn-success" onclick="confirmar()">Solicitar Conta</btn>
+    </div>
 
-<div class="divSolictConta">
-<a class="btn btn-success">Solicitar Conta</a>
-</div>
+
+    <div class="bkgBlur" id="bkgBlur">
+        <div class="confirmaPedido" id="confirmacao">
+            <p class="confirmaTexto">Sua conta foi solicitada com successo,por favor aguarde o garçom!</p>
+            <form class="divSolictConta" asp-action="updateStatus" method="post">
+                <input type="hidden" id="id" name="id" value="@Model.First().Pedido.Id" />
+                <input class="btn btn-success" type="submit" value="Ok" />
+            </form>
+
+        </div>
+
+    </div>
+}
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', async function () {
+
+        window.confirmar = function (change) {
+            var div = document.getElementById('bkgBlur');
+            div.style.display = 'flex';
+        }
+        window.negar = function (change) {
+            var div = document.getElementById('bkgBlur');
+            div.style.display = 'none';
+        }
+    })
+</script>

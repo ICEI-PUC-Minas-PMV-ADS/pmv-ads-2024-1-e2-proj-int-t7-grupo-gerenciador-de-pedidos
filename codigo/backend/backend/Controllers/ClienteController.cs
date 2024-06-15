@@ -107,7 +107,7 @@ namespace backend.Controllers
                 pedido = new Pedido
                 {
                     Data = DateTime.Now,
-                    StatusId = 2,
+                    StatusId = 1,
                     MesaId = mesa,
                     ItemPedidos = new List<ItemPedido>()
                 };

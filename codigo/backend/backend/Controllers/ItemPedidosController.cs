@@ -176,5 +176,26 @@ namespace backend.Controllers
         {
             return _context.ItemPedidos.Any(e => e.Id == id);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> updateStatus(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var pedido = await _context.Pedidos.FindAsync(id);
+            if (pedido == null)
+            {
+                return NotFound();
+            }
+
+            pedido.StatusId = 5;
+
+            await _context.SaveChangesAsync();
+            return Redirect("/");
+        }
     }
 }
