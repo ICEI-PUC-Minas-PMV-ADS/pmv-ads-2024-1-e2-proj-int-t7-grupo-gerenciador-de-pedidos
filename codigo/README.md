@@ -6,6 +6,6 @@ O site desenvolvido em HTML/CSS/JS é um projeto estático, ideal para hospedage
 
 ## Histórico de versões
 
-### [0.1.1] - 10/06/2024
+### [0.0.1] - 14/06/2024
 #### Adicionado
 - Adicionado ...
