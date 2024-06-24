@@ -47,16 +47,18 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <ul>
   <li><a href="https://easyeats.azurewebsites.net/Usuarios/Login"> Acesso do Administrador</a></li>
 
+  <ul>
+    <li>
+      <a href="https://easyeats.azurewebsites.net">Cardaptio Mobile(sem mesa)</a>
+    </li>
+    <li>
+      <a href="https://easyeats.azurewebsites.net/?mesa=1">Cardaptio Mobile(mesa 1)</a>
+    </li>
+    <li>
+      <a href="https://easyeats.azurewebsites.net/?mesa=2">Cardaptio Mobile(mesa 2)</a>
+    </li>
+  </ul>
   
-  <li>
-    <a href="https://easyeats.azurewebsites.net">Cardaptio Mobile(sem mesa)</a>
-  </li>
-  <li>
-    <a href="https://easyeats.azurewebsites.net/?mesa=1">Cardaptio Mobile(mesa 1)</a>
-  </li>
-  <li>
-    <a href="https://easyeats.azurewebsites.net/?mesa=2">Cardaptio Mobile(mesa 2)</a>
-  </li>
   
 </ul>
 
