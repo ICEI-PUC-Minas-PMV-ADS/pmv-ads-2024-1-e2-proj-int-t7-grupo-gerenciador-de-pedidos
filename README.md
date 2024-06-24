@@ -47,7 +47,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <ul>
   <li><a href="https://easyeats.azurewebsites.net/Usuarios/Login"> Acesso do Administrador</a></li>
 
-  <ul>
+  <ul>ACESSO DO CLIENTE
     <li>
       <a href="https://easyeats.azurewebsites.net">Cardaptio Mobile(sem mesa)</a>
     </li>
