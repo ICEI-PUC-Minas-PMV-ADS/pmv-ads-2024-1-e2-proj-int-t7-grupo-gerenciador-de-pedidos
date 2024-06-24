@@ -44,8 +44,9 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 </ol>
 
 # Hospedagem
+### Acesso do Administrador
 <ul>
-  <li><a href="https://easyeats.azurewebsites.net/Usuarios/Login"> Acesso do Administrador</a></li>
+  <li><a href="https://easyeats.azurewebsites.net/Usuarios/Login"> Login Administrador</a></li>
 </ul>
 
 ### Acesso do Cliente
