@@ -1,0 +1,27 @@
+message: Please cite this software using these metadata.
+title:
+authors:
+  - family-names: Henrique Orfus Tavares
+    given-names: Alvaro 
+  - family-names: Vinícius Costa Magno
+    given-names: Amaury
+  - family-names: Felix Braga
+    given-names: Gustavo 
+  - family-names: Flávio Ferreira Nogueira
+    given-names: Pedro 
+  - family-names: Tadeu Rosa de Oliveira Luciano
+    given-names: Siderley
+  - family-names: Abi-Acl Simões Galinari
+    given-names: Vitor
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Jeunon de Alencar
+    given-names: Bernardo 
+ 
+keywords:
+  - gerenciador
+  - pedidos
+
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos.git
+version: 1.0.0
+date-released: 2024-06-23
