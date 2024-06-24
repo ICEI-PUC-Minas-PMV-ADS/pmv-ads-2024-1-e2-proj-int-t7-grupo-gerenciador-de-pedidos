@@ -43,6 +43,12 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="docs/13-Referências.md"> Referências</a></li>
 </ol>
 
+# Hospedagem
+<ul>
+  <li><a href="https://easyeats.azurewebsites.net/Usuarios/Login"> Acesso do Administrador</a></li>
+  <li><a href="https://easyeats.azurewebsites.net"> Cardápio Mobile</a></li>
+</ul>
+
 # Código
 
 <li><a href="codigo/README.md"> Código Fonte</a></li>
