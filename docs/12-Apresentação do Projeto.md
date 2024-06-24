@@ -18,8 +18,6 @@ O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do conte
 > - [Especialista do TED dá 10 dicas para criar slides eficazes e bonitos](https://soap.com.br/blog/especialista-do-ted-da-10-dicas-para-criar-slides-eficazes-e-bonitos)
 
 ## Conjunto de Slides (Estrutura)
-
-### Slide
  
 ![Slide1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/assets/144865205/41d26c78-2896-4368-b42f-3972a3fee016)
 ![Slide2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/assets/144865205/c65da70e-d80c-4290-a786-c757b6b6255e)
