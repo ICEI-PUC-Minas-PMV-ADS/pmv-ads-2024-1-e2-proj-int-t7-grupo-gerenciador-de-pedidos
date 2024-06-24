@@ -52,13 +52,13 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 ### Acesso do Cliente
 <ul>
     <li>
-      <a href="https://easyeats.azurewebsites.net">Cardaptio Mobile(sem mesa)</a>
+      <a href="https://easyeats.azurewebsites.net">Cardápio Mobile(sem mesa)</a>
     </li>
     <li>
-      <a href="https://easyeats.azurewebsites.net/?mesa=1">Cardaptio Mobile(mesa 1)</a>
+      <a href="https://easyeats.azurewebsites.net/?mesa=1">Cardápio Mobile(mesa 1)</a>
     </li>
     <li>
-      <a href="https://easyeats.azurewebsites.net/?mesa=2">Cardaptio Mobile(mesa 2)</a>
+      <a href="https://easyeats.azurewebsites.net/?mesa=2">Cardápio Mobile(mesa 2)</a>
     </li>
 </ul>
 
