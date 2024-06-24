@@ -46,8 +46,10 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 # Hospedagem
 <ul>
   <li><a href="https://easyeats.azurewebsites.net/Usuarios/Login"> Acesso do Administrador</a></li>
+</ul>
 
-  <ul>ACESSO DO CLIENTE
+### Acesso do Cliente
+<ul>
     <li>
       <a href="https://easyeats.azurewebsites.net">Cardaptio Mobile(sem mesa)</a>
     </li>
@@ -57,9 +59,6 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
     <li>
       <a href="https://easyeats.azurewebsites.net/?mesa=2">Cardaptio Mobile(mesa 2)</a>
     </li>
-  </ul>
-  
-  
 </ul>
 
 # Código
