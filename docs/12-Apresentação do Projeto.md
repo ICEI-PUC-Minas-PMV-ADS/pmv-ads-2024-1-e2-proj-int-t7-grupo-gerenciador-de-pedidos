@@ -2,6 +2,7 @@
 ![LogoTextoEasyEats](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/assets/144865205/7e8ffd19-ec22-43fa-b50b-92607b4df8ec)
 
 ## Identidade Visual (Marca, Design)
+### Paleta de Cores Base
 ![paleta](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t7-grupo-gerenciador-de-pedidos/assets/144865205/c728ec56-e8d5-4d6a-a16d-485560f60885)
 
 ## Conjunto de Slides (Estrutura)
